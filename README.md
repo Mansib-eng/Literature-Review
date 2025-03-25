@@ -11,4 +11,4 @@ A **literature review** is a critical summary and analysis of existing research,
 
 ## Watch the Video Explanation
 For a detailed explanation, check out this YouTube video:
-[![Literature Review Explanation](https://img.youtube.com/vi/KkAnKGuX7fs/0.jpg)](https://www.youtube.com/watch?v=KkAnKGuX7fs)
+[![Literature Review Explanation](https://img.youtube.com/vi/KkAnKGuX7fs/0.jpg)](https://www.youtube.com/watch?v=KkAnKGuX7fs) 
