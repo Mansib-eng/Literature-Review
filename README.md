@@ -1,4 +1,4 @@
-# Step one. 
+# Step one: follow the `methodology.md`
 
 
 
