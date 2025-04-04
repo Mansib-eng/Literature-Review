@@ -1,5 +1,9 @@
-Here’s a **sample filled-out PRISMA table** to help you understand how to document your paper selection process for a Systematic Literature Review on your topic:  
-**"AI-Powered Methods for Assessing Attention and Focus in the Digital Age."**
+
+1. **Log search terms** and associate them with found papers  
+2. **Track how many papers were found per search term**  
+3. **Document the PRISMA flow** steps  
+4. **Record exclusion reasons and paper counts at each stage**  
+5. **End up with a final list of selected papers**
 
 ---
 
