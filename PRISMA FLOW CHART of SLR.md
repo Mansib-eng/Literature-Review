@@ -7,20 +7,17 @@
 
 ---
 
-### **PRISMA Flow Diagram Table (Text Format)**
+**PRISMA Flow Table (for SLR on AI-Powered Methods for Assessing Attention and Focus)**  
 
-| Phase                     | Number of Papers | Description |
-|---------------------------|------------------|-------------|
-| Records identified        | 185              | Retrieved from IEEE Xplore (60), ACM DL (45), Springer (30), Google Scholar (50) using keywords like "attention detection AI", "focus tracking machine learning" etc. |
-| Records after duplicates removed | 160        | Removed 25 duplicates using reference manager (e.g., Zotero/Mendeley) |
-| Records screened (Title + Abstract) | 160     | Reviewed title and abstract to see if relevant to the research questions |
-| Records excluded          | 95               | Not related to AI methods or didn't focus on attention/focus assessment |
-| Full-text articles assessed | 65              | Downloaded and fully reviewed to evaluate methodologies and results |
-| Full-text articles excluded | 20             | Rejected because of poor methodology, irrelevant focus, or insufficient technical detail |
-| Studies included in final synthesis | 45      | Final set of peer-reviewed, relevant studies used in data extraction and analysis |
+| Stage             | Criteria                                                                 | Included / Excluded | Paper Remaining Count |
+|------------------|--------------------------------------------------------------------------|---------------------|------------------------|
+| Identification    | Records identified using search terms across 5 databases (IEEE, ACM, ScienceDirect, Google Scholar, PubMed) using AI + attention/focus terms | Included            | 200                    |
+| Deduplication     | Remove duplicate records across databases                               | Excluded            | 150                    |
+| Title Screening   | Remove papers not related to attention/focus or AI                      | Excluded            | 100                    |
+| Abstract Screening| Keep papers that mention AI/ML techniques related to attention/focus    | Included            | 70                     |
+| Language Filter   | Remove papers not written in English                                    | Excluded            | 65                     |
+| Full-Text Retrieval| Remove papers with no accessible full text                             | Excluded            | 55                     |
+| Full-Text Eligibility Check | Apply inclusion/exclusion criteria: AI usage, empirical methods, published between 2013–2024, involves human attention/focus assessment | Included            | 30                     |
+| Final Inclusion   | Studies included for qualitative synthesis and review                   | Included            | 20                     |
 
----
 
-If you want to visualize this, I can also turn this into a proper **PRISMA flowchart image**, like the one typically shown in published SLR papers.
-
-Would you like that version too?
