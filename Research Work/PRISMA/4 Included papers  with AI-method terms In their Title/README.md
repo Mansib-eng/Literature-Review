@@ -10,7 +10,7 @@
 
 
 
-##  AI-Driven Method Filter**
+##  AI-Driven Method Filter
 
 In this stage, a Python script was used to further refine the dataset by **including only those papers** whose titles mentioned AI-driven methodological terms. The purpose was to ensure that the retained studies not only addressed attention or mental health but also applied concrete AI techniques in their approach.
 
