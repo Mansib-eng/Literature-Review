@@ -4,9 +4,20 @@
 
 
 
-### **Step 4: Extract and Synthesize Data**
+## **Step 4: Extract and Synthesize Data**
+
 **What to do:**
 - Once you’ve selected relevant papers, extract key data in a structured format to summarize findings and compare studies.
+
+**Make sure to get answers to these questions, that is our research**
+
+```
+1. What AI techniques are commonly used for assessing attention and focus in digital environments?
+2. What datasets and evaluation metrics are used for AI-based attention assessment studies?
+3. How effective are machine learning models in detecting shifts in attention?
+4. What challenges and limitations exist in AI-powered attention assessment?
+5. What are the future research directions for AI-based attention analysis?
+```
 
 **How to work on this step:**
 - **Create a Data Extraction Table** with columns such as:
@@ -18,12 +29,10 @@
   - **Main findings**
   - **Limitations mentioned**
 
-- Use tools like **Excel**, **Google Sheets**, or **Python Pandas** for easy organization.
-- Identify patterns, trends, and gaps in research by organizing the data systematically. This table will help you synthesize the findings from multiple studies.
 
 ---
 
-### **Step 5: Analyze Findings**
+## **Step 5: Analyze Findings**
 **What to do:**
 - In this step, compare the different AI methods used in the selected studies, their effectiveness, and limitations. Identify key themes and trends.
 
