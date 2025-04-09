@@ -1,75 +1,97 @@
-# Step one: follow the `methodology.md`
+# Steps remaining. We should start after Exam
 
 
 
-# Search terms
 
 
-```
-AI + Attention and Focus
-AI-based attention assessment
-Machine learning for attention tracking
-Deep learning attention analysis
-Artificial intelligence cognitive load measurement
-AI for focus detection
-Attention monitoring using AI
-Real-time attention tracking with machine learning
-AI in cognitive engagement analysis
-AI models for digital attention detection
-Neural networks attention tracking
-Multimodal AI for attention recognition
-Eye-tracking with deep learning
-EEG and AI-based attention detection
-AI-powered user engagement monitoring
-Transformer models for attention prediction
-Systematic review AI attention assessment
-Review of machine learning attention models
-AI in education for attention tracking
-AI-based digital well-being assessment
-```
+### **Step 4: Extract and Synthesize Data**
+**What to do:**
+- Once you’ve selected relevant papers, extract key data in a structured format to summarize findings and compare studies.
 
+**How to work on this step:**
+- **Create a Data Extraction Table** with columns such as:
+  - **Paper title & author(s)**
+  - **Year of publication**
+  - **AI/ML methods used**
+  - **Dataset applied**
+  - **Evaluation metrics (e.g., accuracy, F1-score)**
+  - **Main findings**
+  - **Limitations mentioned**
 
+- Use tools like **Excel**, **Google Sheets**, or **Python Pandas** for easy organization.
+- Identify patterns, trends, and gaps in research by organizing the data systematically. This table will help you synthesize the findings from multiple studies.
 
 ---
 
-1. **Log search terms** and associate them with found papers  
-2. **Track how many papers were found per search term**  
-3. **Document the PRISMA flow** steps  
-4. **Record exclusion reasons and paper counts at each stage**  
-5. **End up with a final list of selected papers**
+### **Step 5: Analyze Findings**
+**What to do:**
+- In this step, compare the different AI methods used in the selected studies, their effectiveness, and limitations. Identify key themes and trends.
 
-For **all-in-one SLR management with PRISMA tracking**, your best option is:
+**How to work on this step:**
+1. **Compare Methods:**  
+   - Contrast supervised vs. unsupervised learning models used for attention tracking.  
+   - Highlight AI architectures such as CNN (Convolutional Neural Networks), RNN (Recurrent Neural Networks), and Transformer-based models commonly used in these studies.
+   
+2. **Identify Strengths and Weaknesses:**  
+   - Which AI methods performed best in practical applications?  
+   - Were there any common challenges across studies such as issues with data quality, computational cost, or bias in AI models?
 
-### **Rayyan** (https://rayyan.ai)
-
-**Why Rayyan is perfect for you:**
-
-- Lets you **add search terms**, **source**, and **paper metadata** (title, abstract, etc.)
-- You can import papers via **BibTeX**, **RIS**, **EndNote**, or **manually**
-- You can **tag papers** with custom labels (like search term used, inclusion/exclusion reasons)
-- **Blinding feature** to reduce bias when screening (optional)
-- Fully supports **inclusion/exclusion tagging**
-- You can **filter papers** based on reasons and generate PRISMA stats
-- It shows you how many papers are at each stage: **found, included, excluded**
-- You can **export final lists** and PRISMA tracking
-
-Rayyan is widely used in academic SLRs and health/clinical reviews because it aligns very well with PRISMA standards. While it doesn’t auto-generate a PRISMA diagram, you can **easily copy the counts and reasons** to tools like the [PRISMA flowchart generator](https://prisma-statement.org/PRISMAStatement/FlowDiagram.aspx).
+3. **Discuss Research Gaps:**  
+   - Is there a lack of real-time AI models for attention tracking?  
+   - Is there a need for standardized datasets to allow for better comparison between models?  
 
 ---
 
-If you want to keep your data 100% in your control and offline, then a close alternative is:
+### **Step 6: Summarize Conclusions and Future Research Directions**
+**What to do:**
+- Summarize the key insights you have gained from analyzing the studies. Highlight the overall findings and identify any future research directions.
 
-### **Excel or Google Sheets Template (Custom-Built)**
-
-You could build a tracker with:
-
-- One tab for **search log** (term, date, number of papers, database used)
-- One tab for **paper list with inclusion/exclusion tagging**
-- One tab for **PRISMA step logging** (with formulas to auto-calculate numbers at each stage)
-
-But this requires manual effort to design.
+**How to work on this step:**
+- **Summarize Findings:**  
+   Write a concise summary of how AI is currently used for attention and focus assessment in digital environments.
+   
+- **Discuss Implications:**  
+   Address the implications of your findings for sectors like education, digital well-being, and productivity.
+   
+- **Suggest Future Research Directions:**  
+   Propose areas where future research could be focused, such as:
+   - Developing AI models for **real-time attention tracking**.
+   - Exploring **multi-modal data fusion** (e.g., combining EEG, eye-tracking, and facial recognition for more accurate attention assessment).
+   - Addressing **bias and ethical concerns** in AI-based attention tracking systems.
 
 ---
 
-So in short:  
-**Use Rayyan** — it’s the best fit for your workflow, all-in-one, and designed exactly for this purpose. Want help setting up your Rayyan project structure?
+### **Step 7: Finalizing Your Paper**
+**What to do:**
+- Now that the research and data analysis are complete, draft your paper using a structured format. Ensure that all sections are well-organized and properly referenced.
+
+**How to work on this step:**
+- **Write the Draft:**
+   - **Abstract:** Briefly summarize the study’s purpose, methodology, key findings, and conclusions.
+   - **Introduction:** Provide background information on the importance of AI in attention assessment and state your research questions.
+   - **Methodology:** Describe the systematic search process, inclusion/exclusion criteria, and how you selected studies.
+   - **Results:** Present the key findings from the selected studies.
+   - **Discussion:** Provide a comparative analysis, trends, and highlight any research gaps.
+   - **Conclusion and Future Work:** Summarize the main insights and suggest future research directions.
+   - **References:** Use proper citation formats such as IEEE or APA style.
+
+- **Proofreading and Refining:**
+   Use tools like **Grammarly** or **Hemingway Editor** to improve the clarity, grammar, and structure of your paper.
+
+- **Reference Management Tools:**
+   Ensure all citations are formatted correctly using tools like **Zotero** or **Mendeley**.
+
+---
+
+### **Step 8: Final Review and Submission**
+**What to do:**
+- Review the entire paper to ensure it aligns with the objectives and research questions. Ensure your data extraction, analysis, and conclusions are clearly presented.
+
+**How to work on this step:**
+- Double-check that all references are properly cited.
+- Check for clarity, coherence, and flow.
+- Submit the final paper to your intended journal or conference.
+
+---
+
+This is a comprehensive, systematic approach to conducting your literature review on AI methods for assessing attention and focus. The steps are designed to help you stay organized and focused while maximizing the impact and relevance of your review.
