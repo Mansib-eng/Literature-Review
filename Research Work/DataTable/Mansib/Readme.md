@@ -5,7 +5,7 @@
 | 13 | *Real-Time Attention Monitoring System for Classroom* | YOLOv5, DeepSORT | 5,701 action images + 35,000 emotion images | Precision, Recall, mAP@0.5, F1 | Action: 76% mAP, Emotion: 87.7% mAP | Small dataset, privacy concerns | Multi-modal fusion, XAI |
 | 14 | *Student-Engagement Detection* | CATBoost, XGBoost, LightGBM | OULAD (32,593 records) | Accuracy, F1, AUC-ROC | CATBoost: 92.23% accuracy, 0.9626 AUC | Class imbalance (72% low engagement) | Adaptive interventions |
 | 15 | *Dyslexia Adaptive Learning* | SVM, BOF, k-Means | 600 face images (30 students) | Accuracy | SVM Linear: 97.8% | Small sample, occlusion issues | Video analysis integration |
-| 16 | *[PDF Not Found - Title Unknown]* | N/A | N/A | N/A | N/A | N/A | N/A |
+| 16 | *[PDF Not Found - 	Machine and Deep Learning Algorithms for ADHD Detection: A Review]* | N/A | N/A | N/A | N/A | N/A | N/A |
 | 17 | *ADHD/Depression Diagnosis Survey* | SVM, CNN, RF | ADHD-200 (973), DAIC-WOZ (142) | Accuracy, AUC | ADHD: 99.58% (EEG), Depression: 100% (EEG) | Data imbalance | Multimodal datasets |
 | 18 | *ADHD Neural Mechanisms* | SVM, DNN, LASSO | ADHD-200, ABCD datasets | AUC, Sensitivity | 60-90% accuracy | Small samples | Generative models |
 | 19 | *Automatic ADHD Diagnosis* | DT, RF, SVM | NHS data (69 patients) | AUC | DT: 85.5%, 0.871 AUC | Overfitting risks | Fuzzy rule-based models |
