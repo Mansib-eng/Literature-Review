@@ -36,13 +36,13 @@ We used a comprehensive search strategy. We formulated this strategy using a com
 **2.2 PRISMA Steps**
 
 **Identification**
-In the identification phase, records were gathered from seven CSV files, each representing exported results from literature searches conducted across five academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. The searches were performed using keyword combinations related to "Artificial Intelligence", "Machine Learning", and "Attention/Focus". This stage resulted in 346 initial records.
+In the identification phase, we gathered from seven CSV files, each CSV file contained results from literature searches conducted over the five academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. We performed the searches using keyword combinations related to "Artificial Intelligence", "Machine Learning", and "Attention/Focus". This stage resulted in 346 initial records.
 
 **Deduplication (DOI Link)**
-To eliminate duplicate studies, an automated Python program was used to compare the "DOI link" field across all records. As each DOI uniquely identifies a publication, this method reliably removed redundant entries. This step excluded 6 duplicate records, reducing the dataset to 340 unique papers.
+To eliminate duplicate studies, an automated Python program was used to compare the "DOI link" field across all records. As each DOI uniquely identifies a publication, this method reliably removes redundant entries. This step excluded 6 duplicate records, reducing the dataset to 340 unique papers.
 
 **Deduplication (Paper Title)**
-Some duplicate entries did not share identical DOIs due to formatting inconsistencies or missing values. To address this, the same Python program was extended to normalize the "Paper Title" field (by converting to lowercase, stripping whitespace, and standardizing spacing). A second deduplication step was then performed, removing an additional 3 records and resulting in a final dataset of 337 unique papers.
+Some duplicate papers did not share an identical DOI link due to formatting issues or missing values. To address this, we used the same Python program[20] to normalize the "Paper Title" field (by converting to lowercase, stripping whitespace, and standardizing spacing). In this step, we removed an additional 3 records and resulting in a final dataset of 337 unique papers.
 
 **AI, ML, DL Relevance Filter**
 In this stage, we developed a custom Python script to retain only the papers whose titles explicitly mentioned AI-related terms. The filtering logic was designed to be robust, accounting for common formatting patterns found in academic titles. To accurately match keywords such as "AI", "ML", "DL", and their expanded forms, the program first normalized each title by:
