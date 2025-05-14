@@ -1,10 +1,10 @@
-**Title:**
+# Title:
 A Systematic Review on AI-Powered Methods for Assessing Attention and Focus in the Digital Age
 
-**Abstract**
+# Abstract:
 In today's world, our attention and focus are constantly broken due to regular interaction with technology. In our daily life, we spend quite some time with our smartphones, computers, and other devices. Due to the increase in screen time, our thought process has suffered greatly. With that in mind, it was obvious to realize the need for intelligent systems capable of monitoring, assessing, and increasing attention and focus. Artificial Intelligence or AI, particularly machine learning and deep learning models, has shown great promise in automating the detection and evaluation of mental health issues such as attention and focus. This systematic literature review examines the current state of AI-powered methods for assessing attention and focus in digital environments. We followed PRISMA guidelines to identify and filter relevant literature across five major databases, ultimately narrowing it down to 19 highly matched papers. Our systematic literature review focuses on the AI-powered techniques, common datasets used, the evaluation metrics used, and applications such as online learning, mobile usage, and social media, and their role in assessing attention and focus. From our work, the key findings reveal that most of the AI-powered methodologies have a great reliance on supervised learning algorithms and techniques. The paper concludes by outlining current challenges and recommending directions for future research.
 
-**1. Introduction**
+# 1. Introduction:
 Attention and focus are the two greatest components of human psychology. They play a critical role in learning, productivity, and mental health. However, the frequent use of  technology such as smartphones and social media platforms in the online education system has introduced new challenges for mental health issues, especially with learning, keeping up attention, and focus while doing so.
 
 Recent advancements in machine learning, deep learning, and other AI techniques, along with cognitive science, offer a variety of techniques for modeling human attention through behavioral, physiological, and interaction-based signals. 
@@ -13,7 +13,7 @@ Currently, these systems are being deployed in educational environments, digital
 
 This systematic literature review aims to critically analyze the studies that use AI-powered approaches for assessing attention and focus in digital contexts.
 
-**2. Methodology**
+# 2. Methodology:
 Our review process follows the systematic methodology described in the PRISMA framework. The process involved designing a search term, multiple database queries, filtering papers, and then manual screening, as mentioned below. We used a very intelligent search technique,  the detailed search strategy table provided below. This was specifically designed to cover a wide range of relevant domains.
 
 **2.1 Search Strategy and Data Sources**
@@ -95,7 +95,7 @@ Out of the 25 papers that we selected after abstract screening, we found full-te
 | PDF Retrieval                     | Successfully retrieved full-text PDF versions of selected papers for in-depth review                                 | Included            | 19                    |
 
 
-
+<img src="Prisma.png">
 
 # 3. Data Extraction
 
@@ -125,7 +125,7 @@ The data extraction phase involved gathering key information from the selected s
 
 
 
-# Results
+# 4. Results
 
 This section provides a comprehensive analysis of the findings from the 19 reviewed papers, addressing the main questions related to AI techniques, datasets, evaluation metrics, effectiveness, challenges, and future directions in AI-based attention assessment.
 
@@ -263,7 +263,7 @@ The studies pointed to several important future directions for advancing AI-base
 
 
 
-# Discussion
+# 5. Discussion
 
 In this section, the findings from the systematic review of AI-powered methods for assessing attention and focus in digital environments are discussed in light of the broader implications for the field. The key findings are contextualized with existing literature, while the strengths and limitations of the approaches reviewed are analyzed.
 
