@@ -147,17 +147,18 @@ From the reviewed papers, a large range of Artificial Intelligence techniques we
 <img src="piechart.png">
 
 
+| **AI Subfield**                | **Techniques Used**                                                                 | **Number of Papers** | **Paper Numbers**                  |
+|-------------------------------|--------------------------------------------------------------------------------------|----------------------|------------------------------------|
+| Computer Vision               | YOLO v3, Deep Learning, Computer Vision                                              | 2                    | [1], [8]                           |
+| Machine Learning (ML)        | Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree Classifier, Voting Classifier | 7                    | [2], [3], [7], [9], [10], [12], [13] |
+| Deep Learning (DL)           | SDAE + MLP, LSTM + MLP, 1D CNN, CNN, BiLSTM, DNN                                     | 8                    | [3], [4], [6], [8], [11], [12], [18], [19] |
+| Hybrid Models                | Hybrid cluster-based unsupervised learning, 1D CNN                                   | 1                    | [4]                                |
+| Natural Language Processing (NLP) | Whisper API, GPT-4                                                            | 1                    | [6]                                |
+| Feature Extraction & Recognition | DeepFace, VGG-Face, Dlib, EAR, MobileNet-SSD, MediaPipe Pose, FER             | 1                    | [6]                                |
+| Data Fusion/Multimodal       | Multiple ML techniques (integrated analysis across modalities)                      | 1                    | [7]                                |
+| Reinforcement Learning       | None                                                                                 | 0                    | -                                  |
 
-| AI Subfield                           | Techniques Used                                                                                       | Number of Papers | Paper Numbers              |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------- | -------------------------- |
-| **Computer Vision**                   | YOLO v3, Deep Learning, Computer Vision                                                               | 2                | 1, 8                       |
-| **Machine Learning (ML)**             | Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree Classifier, Voting Classifier | 7                | 2, 3, 7, 9, 10, 12, 13     |
-| **Deep Learning (DL)**                | SDAE + MLP, LSTM + MLP, 1D CNN, CNN, BiLSTM, DNN                                                      | 8                | 3, 4, 6, 8, 11, 12, 18, 19 |
-| **Hybrid Models**                     | Hybrid cluster-based unsupervised learning, 1D CNN                                                    | 1                | 4                          |
-| **Natural Language Processing (NLP)** | Whisper API, GPT-4                                                                                    | 1                | 6                          |
-| **Feature Extraction & Recognition**  | DeepFace, VGG-Face, Dlib, EAR, MobileNet-SSD, MediaPipe Pose, FER                                     | 1                | 6                          |
-| **Data Fusion/Multimodal**            | Multiple ML techniques (integrated analysis across modalities)                                        | 1                | 7                          |
-| **Reinforcement Learning**            | None                                                                                                  | 0                | -                          |
+---
 
 
 
