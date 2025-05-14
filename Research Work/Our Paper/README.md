@@ -64,19 +64,20 @@ In this step, we used another Python script[24] to keep only those papers whose 
 In this stage, we manually checked the 73 papers that passed all previous automated program filters. We carefully examined the title of each paper to determine whether it directly aligned with our research. **AI-powered methods for assessing attention and focus in digital environments**. Papers that were off-topic, too general, focused on unrelated AI applications, or lacked a clear connection to attention/focus were excluded based on expert judgement. As a result, the dataset was reduced to a final set of **38 papers**.
 
 **Abstract Screening**
-In this stage, the abstracts of the remaining 38 papers were manually reviewed to determine their **high relevance** to the research topic: **“A Systematic Review on AI-Powered Methods for Assessing Attention and Focus in the Digital Age.”** Each abstract was evaluated against five core research questions, focusing on the presence of:
+In this stage, we manually reviewed the abstracts of the remaining 38 papers to determine their **high relevance** to the research topic. 
 
+We used the following five points to make the judgment:
 * **AI/ML techniques** applied to **attention or focus assessment**
 * Use of relevant **datasets and metrics**
 * Evidence of **model effectiveness**
 * Discussion of **technical challenges**
 * Suggestions for **future directions**
 
-Papers that clearly addressed these dimensions in digital environments (e.g., online learning, smart classrooms, real-time monitoring systems) were retained. The process resulted in **25 final papers** selected for full-text review and data extraction. This ensures a high-quality dataset that directly supports the objectives of the systematic literature review.
+Papers that clearly addressed these points in digital environments, such as online learning, smart classrooms, and real-time monitoring systems, were kept. The process resulted in **25 papers**. These are the papers that are mostly aligned with our research.
+
 
 **PDF Retrieval**  
-Out of the 25 papers selected after abstract screening, full-text PDFs for 19 papers have been successfully retrieved. These documents will be used for the final synthesis, ensuring that a majority of the selected studies can be analyzed in-depth for methodology, results, and relevance to the systematic review.
-
+Out of the 25 papers that we selected after abstract screening, we found full-text PDFs for 19 papers. These are the final 19 papers.
 
 **PRISMA Log Table**
 
