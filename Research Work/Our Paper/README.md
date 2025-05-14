@@ -99,7 +99,7 @@ Out of the 25 papers that we selected after abstract screening, we found full-te
 
 # 3. Data Extraction
 
-This table summarizes key extracted information from 19 reviewed research papers related to Artificial Intelligence based attention monitoring, ADHD diagnosis, and engagement detection.
+This table summarizes key extracted information from 19 reviewed research papers related to AI based attention monitoring, focus, and engagement detection.
 
 | No. | Paper Title | AI Techniques Used | Dataset Description | Evaluation Metrics | Reported Accuracy / Effectiveness | Key Challenges Noted | Future Directions Suggested |
 |-----|-------------|--------------------|----------------------|---------------------|------------------------------------|------------------------|------------------------------|
@@ -129,11 +129,11 @@ This table summarizes key extracted information from 19 reviewed research papers
 
 # 4. Results
 
-This section represents an analysis of what we find from the 19 reviewed papers. We analysis the paper on the basis of some questions related to Artificial Intelligence techniques, datasets, evaluation metrics, effectiveness, challenges, and future directions in Artificial Intelligence based attention assessment.
+This section represents an analysis of what we found from the 19 reviewed papers. We analyze the paper on the basis of some questions related to Artificial Intelligence techniques, datasets, evaluation metrics, effectiveness, challenges, and future directions in Artificial Intelligence based attention assessment.
 
 ## 1. What Artificial Intelligence techniques are commonly used for assessing attention and focus in digital environments?
 
-From the reviewed papers, a large range of Artificial Intelligence techniques were used to assess attention and focus, advancements in machine learning and deep learning. These techniques were applied to different data types, such as physiological signals (such as, **EEG**), behavioral data (such as, **facial expressions**, **eye-tracking**), and environmental factors (such as, **video data from classrooms**).
+From the reviewed papers, a large range of Artificial Intelligence techniques were used to assess attention and focus, advancements in machine learning, and deep learning. These techniques were applied to different data types, such as physiological signals (such as, **EEG**), behavioral data (such as, **facial expressions**, **eye-tracking**), and environmental factors (such as, **video data from classrooms**).
 
 - **Deep Learning Models**: Deep learning methods, especially Convolutional **Neural Networks (CNNs)** and **Long Short-Term Memory (LSTM)** networks, were frequently used for attention detection tasks involving sequential or image data. As an example, **YOLOv3** and **YOLOv5** (Papers [1], [8]) were used to analyze real-time student behavior in classrooms and e-Learning environments. These models can have significant effectiveness in detecting attention by tracking facial expressions and body movements.
 
@@ -303,7 +303,7 @@ Additionally, future research should prioritize expanding datasets to include mo
 
 # 6. Conclusion
 
-In conclusion, Artificial Intelligence driven approaches to attention assessment have shown remarkable progress, especially in educational and clinical settings. By using advancements of machine learning techniques alongside varied data sources, such as **EEG signals**, **facial expressions**, and **eye-tracking** researchers have been able to effectively detect attention shifts and also can support the diagnosis of attention-related disorders.
+In conclusion, Artificial Intelligence powered approaches to attention assessment have shown remarkable progress, especially in educational and clinical settings. By using advancements of machine learning techniques alongside varied data sources, such as **EEG signals**, **facial expressions**, and **eye-tracking** researchers have been able to effectively detect attention shifts and also can support the diagnosis of attention-related disorders.
 Despite these advancements, several challenges occur. **Limited sample sizes**, **concerns around data privacy** and **the dependence on specialized hardware** continue to effect broader adoption. To move forward, future research should prioritize building more generalizable models, developing larger and more diverse datasets, and advancing multimodal systems. These steps will make Artificial Intelligence powered attention assessment tools more accurate, ethical, and applicable in real-world scenarios.
 
 
