@@ -224,35 +224,35 @@ Several challenges and limitations were identified across the reviewed studies:
 
 
 
-### 5. What are the future research directions for AI-based attention analysis?
+### 5. What are the future research directions for Artificial Intelligence based attention analysis?
 
-The studies pointed to several important future directions for advancing AI-based attention assessment:
+The studies identify to several important future directions for advancing Artificial Intelligence based attention assessment:
 
-* **Multimodal Approaches**: Combining multiple data types, such as **EEG**, **facial expressions**, and **eye-tracking**, was highlighted as a promising direction for improving attention detection accuracy. Multimodal systems can compensate for the limitations of individual data types and create more robust models (Papers 1, 7, 8).
+•	**Multimodal Approaches**: Combining multiple data types, such as **EEG**, **facial expressions**, and **eye-tracking**, was highlighted as a great direction for improving attention detection accuracy. Multimodal systems can reduce limitations of individual data types and create more robust models (Papers [1], [7], [8]).
 
-* **Real-Time Systems and Scalability**: Future research should focus on developing **real-time attention monitoring systems** that can be applied in dynamic environments such as classrooms or workplaces. Improving the scalability of AI models for broader usage, especially in large, diverse populations, was emphasized (Papers 6, 16).
+•	**Real-Time Systems and Scalability**: Future research should focus on developing **real-time attention monitoring systems** that can be used in dynamic environments such as classrooms or workplaces. Improving the scalability of Artificial Intelligence models for large usage, especially in large, diverse populations that can strengthen models (Papers [6], [16]).
 
-* **Explainability and Transparency**: As AI models become more integrated into clinical and educational settings, there is a growing need for **explainable AI** to ensure that the decision-making processes are transparent and understandable. This would be particularly important in contexts like ADHD diagnosis, where stakeholders require clarity about model predictions (Papers 10, 19).
+•	**Explainability and Transparency**: In modern days, Artificial Intelligence models become more integrated into clinical and educational settings so there is a growing need for **explainable Artificial Intelligence** that ensure the decision-making processes are transparent and understandable. This would be especially important in contexts like ADHD diagnosis, where require clarity about model predictions (Papers [10], [19]).
 
-* **Larger Datasets and Personalized Approaches**: Expanding datasets to include a broader range of individuals and environmental contexts would help improve model generalization. Additionally, personalized approaches that adapt to individual cognitive processing patterns could enhance the effectiveness of attention monitoring systems (Papers 5, 9).
+•	**Larger Datasets and Personalized Approaches**: Expanding datasets to include a wide range of individuals and environmental contexts would help improve model generalization. Also, using personalized methods that adjust to how each person thinks and processes information could make attention monitoring systems work much better and smoother (Papers [5], [9]).
 
-* **Integration with Educational Tools**: Integrating AI-based attention monitoring systems with **eLearning platforms** and **virtual reality tools** could provide real-time feedback to learners and instructors. This would enable personalized interventions to improve student engagement and learning outcomes (Papers 8, 7).
+•	**Integration with Educational Tools**: Real-time feedback could be provided to learners and instructors by Integrating Artificial Intelligence based attention monitoring systems with **e-Learning platforms** and **virtual reality tools**. This could help create personalized support that helps student engagement and improves learning results (Papers [8], [7]).
 
 
 
 <img src="bar.png">
 
 
-| Future Direction Suggested                                 | No of Papers Addressing This Suggestion | Papers                 |
-| ---------------------------------------------------------- | --------------------------------------- | ---------------------- |
-| **Real-time systems and processing**                       | 4                                       | Papers 1, 3, 4, 18     |
-| **Multimodal data integration**                            | 5                                       | Papers 2, 5, 8, 11, 15 |
-| **Larger, more diverse datasets**                          | 4                                       | Papers 2, 3, 5, 11     |
-| **Personalized models**                                    | 3                                       | Papers 2, 5, 3         |
-| **Improved accuracy and robustness of models**             | 4                                       | Papers 5, 6, 9, 17     |
-| **Use of new technologies (e.g., VR, AI, Explainable AI)** | 4                                       | Papers 1, 6, 16, 5     |
-| **Integration with educational tools or real-life tasks**  | 3                                       | Papers 1, 7, 6         |
-| **Addressing privacy concerns**                            | 2                                       | Papers 6, 8            |
+| Future Direction Suggested                              | No of Papers Addressing This Suggestion | Papers                         |
+|---------------------------------------------------------|------------------------------------------|--------------------------------|
+| Real-time systems and processing                        | 4                                        | Papers [1], [3], [4], [18]     |
+| Multimodal data integration                             | 5                                        | Papers [2], [5], [8], [11], [15] |
+| Larger, more diverse datasets                           | 4                                        | Papers [2], [3], [5], [11]     |
+| Personalized models                                     | 3                                        | Papers [2], [5], [3]           |
+| Improved accuracy and robustness of models              | 4                                        | Papers [5], [6], [9], [17]     |
+| Use of new technologies (e.g., VR, AI, Explainable AI)  | 4                                        | Papers [1], [6], [16], [5]     |
+| Integration with educational tools or real-life tasks   | 3                                        | Papers [1], [7], [6]           |
+| Addressing privacy concerns                             | 2                                        | Papers [6], [8]                |
 
 
 
