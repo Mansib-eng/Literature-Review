@@ -166,69 +166,60 @@ From the reviewed papers, a large range of Artificial Intelligence techniques we
 
 
 
-### 2. What datasets and evaluation metrics are used for AI-based attention assessment studies?
+## 2. What datasets and evaluation metrics are used for Artificial Intelligence based attention assessment studies?
 
-The datasets and evaluation metrics utilized in the reviewed studies varied greatly, reflecting the diversity in attention-related tasks. From diagnostic assessments of attention disorders like ADHD to monitoring attention in real-time classroom settings, different datasets and metrics were applied.
+The datasets and evaluation metrics used in the reviewed studies varied greatly, reflecting the differences in attention-related tasks. From diagnostic assessments of different datasets and metrics were used to monitoring attention in real-time classroom factors and attention disorders like ADHD.
 
-* **Datasets**: A range of datasets was employed to assess attention and focus, with a focus on both behavioral data and physiological signals.
+- **Datasets:** A range of datasets was applied to assess attention and focus, with a focus on both behavioral data and physiological signals.  
+  - **EEG-based datasets** were widely used in the context of cognitive load and attention deficit detection.  For example, the **ADHD-200** dataset provided a large collection of EEG data for ADHD classification (Papers [11], [19]). Also, EEG data from wearable devices were used in real-time attention estimation tasks (Papers [3], [4]).  
+  - **Eye-tracking datasets** were also common in attention studies, especially for analyzing visual attention in e-Learning and classroom environments. The **CEW dataset** and **OULAD dataset** provided data on eye states, pupil movements, and facial expressions (Papers [7], [9]).  
+  - **SPECT brain scans** were used in some studies to assess brain activity and its correlation with attention deficits (Paper [19]). These datasets used for understanding attention-related disorders in-depth.  
+  - **Facial expression datasets** were generally useful in assessing attention in facial expressions were linked to students' engagement levels (Papers [1], [9]).  
 
-  * **EEG-based datasets** were widely used, particularly in the context of cognitive load and attention deficit detection. The **ADHD-200** dataset, for example, provided a large collection of EEG data for ADHD classification (Papers 11, 19). Additionally, EEG data from wearable devices were used in real-time attention estimation tasks (Papers 3, 4).
+- **Evaluation Metrics:** Several evaluation metrics were used to assess the effectiveness of Artificial Intelligence models in detecting attention shifts and disorders:  
+  - **Accuracy** was the most common metric that is used to classifying attention levels in real-time systems (Papers [1], [3], [8]). **Deep Learning** and **SVM** models achieved high accuracy scores in various attention-related tasks.  
+  - **Precision, Recall, and F1-Score** were commonly used to evaluate performance in imbalanced datasets, that in real-time applications where precision and recall are important for identifying both attention and distraction states (Papers [2], [6], [9]).  
+  - **Area Under Curve (AUC)** was often used for ADHD detection and cognitive load estimation tasks. Those observed in studies with **SVM** (Papers [11], [12], [19]), which has High AUC values, demonstrated the ability of model that discriminates between different attention-related states effectively.  
+  - **Homogeneity Score** and **Silhouette Coefficient** were used in unsupervised learning models to assess the quality of clustering in attention data (Paper [4]).  
 
-  * **Eye-tracking datasets** were also common in attention studies, especially those aimed at analyzing visual attention in eLearning and classroom environments. The **CEW dataset** and **OULAD dataset** provided data on eye states, pupil movements, and facial expressions (Papers 7, 9).
+---
 
-  * **SPECT brain scans** were utilized in some studies to assess brain activity and its correlation with attention deficits (Paper 19). These datasets allowed for in-depth exploration of neuroimaging techniques in understanding attention-related disorders.
-
-  * **Facial expression datasets** were particularly useful in assessing attention in educational settings, where facial expressions were linked to students' engagement levels (Papers 1, 9).
-
-* **Evaluation Metrics**: Several evaluation metrics were employed to assess the effectiveness of AI models in detecting attention shifts and disorders:
-
-  * **Accuracy** was the most common metric, with studies frequently reporting it for classifying attention levels in real-time systems (Papers 1, 3, 8). Models based on **Deep Learning** and **SVM** achieved high accuracy scores in various attention-related tasks.
-
-  * **Precision, Recall, and F1-Score** were commonly used to evaluate performance in imbalanced datasets, particularly for real-time applications where precision and recall are crucial for identifying both attention and distraction states (Papers 2, 6, 9).
-
-  * **Area Under Curve (AUC)** was often reported for ADHD detection and cognitive load estimation tasks. High AUC values, such as those observed in studies with **SVM** (Papers 11, 12, 19), demonstrated the models' ability to discriminate between different attention-related states effectively.
-
-  * **Homogeneity Score** and **Silhouette Coefficient** were used in unsupervised learning models to assess the quality of clustering in attention data (Paper 4).
-
-### 3. How effective are machine learning models in detecting shifts in attention?
+## 3. How effective are machine learning models in detecting shifts in attention?
 
 The machine learning models demonstrated varying levels of effectiveness depending on the data types used and the context of the task:
 
-* **Real-Time Attention Monitoring**: In studies aimed at monitoring attention in classroom and eLearning environments, **Deep Learning** models such as **YOLOv3** and **YOLOv5** exhibited impressive real-time performance, detecting attention shifts with high accuracy (Paper 8). These models were capable of processing video data to assess facial expressions and body movements, which are key indicators of attention in educational settings.
+- **Real-Time Attention Monitoring:** It is used for monitoring attention in classroom and e-Learning environments, **Deep Learning** models such as **YOLOv3** and **YOLOv5** work brilliantly in real-time performance, detecting attention shifts with high accuracy (Paper [8]). These models were capable of processing video data to assess facial expressions and body movements, which are the main indicators of attention in educational settings.  
+- **EEG and Cognitive Load Estimation:** Deep learning models like **SDAE + MLP** and **LSTM + MLP** achieved accuracies of up to **85.42%** for detecting shifts in cognitive load and attention using EEG (Paper [3]). These models were effective in detecting subtle shifts in attention during tasks of varying difficulty and also highlighting their potential in cognitive workload management.  
+- **ADHD Detection:** **ADHD-200** and **SPECT brain scans** were highly effective in detecting attention deficits associated with **ADHD** that achieving accuracies of **up to 99.58%** (Papers [11], [19]). All of these models used a combination of **SVM**, **Random Forest**, and **CNN** architectures to classify **ADHD** based on neuroimaging and physiological data.  
+- **Facial Expression and Eye-Tracking Models:** Models analyzing facial expressions and eye-tracking data in classroom settings demonstrated high performance that accuracies ranging **from 85% to 93.1%** (Papers [7], [8]). These models were especially effective at detecting attention shifts which is related to student engagement in educational contexts.  
 
-* **EEG and Cognitive Load Estimation**: For detecting shifts in cognitive load and attention using EEG, deep learning models like **SDAE + MLP** and **LSTM + MLP** achieved accuracies of up to **85.42%** (Paper 3). These models were particularly effective in detecting subtle shifts in attention during tasks of varying difficulty, highlighting their potential in cognitive workload management.
+---
 
-* **ADHD Detection**: Models trained on datasets such as **ADHD-200** and **SPECT brain scans** were highly effective in detecting attention deficits associated with ADHD, achieving accuracies of **up to 99.58%** (Papers 11, 19). These models utilized a combination of **SVM**, **Random Forest**, and **CNN** architectures to classify ADHD based on neuroimaging and physiological data.
-
-* **Facial Expression and Eye-Tracking Models**: Models analyzing facial expressions and eye-tracking data in classroom settings demonstrated high performance, with accuracies ranging from **85% to 93.1%** (Papers 7, 8). These models were particularly effective at detecting attention shifts related to student engagement in educational contexts.
-
-### 4. What challenges and limitations exist in AI-powered attention assessment?
+## 4. What challenges and limitations exist in Artificial Intelligence powered attention assessment?
 
 Several challenges and limitations were identified across the reviewed studies:
 
-* **Data-Related Issues**: Many studies suffered from **small sample sizes**, which limited the generalizability of the findings (Papers 3, 13). Additionally, **data imbalance** was a significant issue in datasets involving attention states, where low-attention states were often underrepresented (Papers 9, 19).
-
-* **Overfitting**: Overfitting was a common challenge in models trained on small or highly specific datasets. This was especially problematic in studies using deep learning models, where overfitting led to reduced performance on unseen data (Papers 4, 15).
-
-* **Privacy and Ethical Concerns**: The use of **biometric data**, including facial expressions, EEG, and physiological measurements, raised concerns about privacy and ethical implications, particularly when working with vulnerable populations like children (Papers 6, 15). Ensuring that data collection methods comply with privacy regulations was noted as an important challenge.
-
-* **Hardware Constraints**: Many models required specialized equipment, such as **EEG headsets** and **eye-trackers**, which limited their scalability in real-world applications. Developing models that are less reliant on expensive or intrusive hardware was a key challenge (Papers 8, 14).
+- **Data-Related Issues:** Many studies suffered from **small sample sizes** (Papers [3], [13]). Also, **data imbalance** was a significant issue in datasets involving attention states, where low-attention states were often ignored (Papers [9], [19]).  
+- **Overfitting:** Overfitting was a common issue in models trained on small or highly specific datasets. Overfitting led to reduced performance on unseen data (Papers [4], [15]).  
+- **Privacy and Ethical Concerns:** The use of **biometric data**, including facial expressions, EEG, and physiological measurements, raised concerns about privacy and ethical associations, especially when working with children (Papers [6], [15]).  
+- **Hardware Constraints:** Many models required specialized equipment, such as **EEG headsets** and **eye-trackers**, which creates an issue in scalability in real-world applications. Developing models that are less reliant on expensive hardware was a key challenge (Papers [8], [14]).  
 
 
 
 
 
-| Key Limitation                                           | No of Papers Addressing This Limitation | Papers                            |
-| -------------------------------------------------------- | --------------------------------------- | --------------------------------- |
-| Small sample size                                        | 8                                       | Papers 2, 3, 4, 7, 10, 12, 14, 15 |
-| Data imbalance                                           | 3                                       | Papers 9, 11, 13                  |
-| Subject variability                                      | 1                                       | Paper 3                           |
-| Privacy concerns                                         | 2                                       | Papers 6, 8                       |
-| Overfitting risk                                         | 1                                       | Paper 13                          |
-| Comorbidities and diagnosis accuracy                     | 2                                       | Papers 5, 15                      |
-| Limited feature sets (e.g., blink frequency, eye states) | 2                                       | Papers 7, 8                       |
-| Lack of ecological validity (real-world applicability)   | 1                                       | Paper 16                          |
-| No control for confounding factors (e.g., comorbidities) | 1                                       | Paper 15                          |
+
+| **Key Limitation**                                        | **No of Papers Addressing This Limitation** | **Papers**                                       |
+|-----------------------------------------------------------|----------------------------------------------|--------------------------------------------------|
+| Small sample size                                          | 8                                            | Papers [2], [3], [4], [7], [10], [12], [14], [15] |
+| Data imbalance                                             | 3                                            | Papers [9], [11], [13]                           |
+| Subject variability                                        | 1                                            | Paper [3]                                        |
+| Privacy concerns                                           | 2                                            | Papers [6], [8]                                  |
+| Overfitting risk                                           | 1                                            | Paper [13]                                       |
+| Comorbidities and diagnosis accuracy                       | 2                                            | Papers [5], [15]                                 |
+| Limited feature sets (e.g., blink frequency, eye states)   | 2                                            | Papers [7], [8]                                  |
+| Lack of ecological validity (real-world applicability)     | 1                                            | Paper [16]                                       |
+| No control for confounding factors (e.g., comorbidities)   | 1                                            | Paper [15]                                       |
 
 
 
