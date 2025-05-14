@@ -144,7 +144,7 @@ From the reviewed papers, a large range of Artificial Intelligence techniques we
 - **Behavioral and Physiological Data Integration**: An important section that the integration of multiple data types, such as **facial expression recognition (FER)**, **eye-tracking**, and **EEG data**. The integration of these features using machine learning techniques like **SVM** or **Deep Neural Networks (DNNs)** allowed for better prediction of attention levels (Papers [7], [16]). This combination of data types made the models stronger by balancing out the weaknesses.
 
 
-[Make a pie chart of this]
+<img src="piechart.png">
 
 
 
@@ -247,7 +247,9 @@ The studies pointed to several important future directions for advancing AI-base
 * **Integration with Educational Tools**: Integrating AI-based attention monitoring systems with **eLearning platforms** and **virtual reality tools** could provide real-time feedback to learners and instructors. This would enable personalized interventions to improve student engagement and learning outcomes (Papers 8, 7).
 
 
-[Make a bar chart of this]
+
+<img src="bar.png">
+
 
 | Future Direction Suggested                                 | No of Papers Addressing This Suggestion | Papers                 |
 | ---------------------------------------------------------- | --------------------------------------- | ---------------------- |
