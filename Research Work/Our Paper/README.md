@@ -14,10 +14,10 @@ Currently, these systems are being deployed in educational environments, digital
 This systematic literature review aims to critically analyze the studies that use AI-powered approaches for assessing attention and focus in digital contexts.
 
 **2. Methodology**
-This review follows a systematic methodology grounded in the PRISMA framework, ensuring transparency, reproducibility, and rigor in identifying and evaluating relevant literature. The process involved search term design, multi-database querying, automated filtering, and manual screening, as outlined below. We used a very comprehensive search technique, following the detailed search strategy table provided, which was specifically designed to cover a wide range of relevant areas, ensuring that all aspects were considered thoroughly.
+Our review process follows the systematic methodology described in the PRISMA framework. The process involved designing a search term, multiple database queries, filtering papers, and then manual screening, as mentioned below. We used a very intelligent search technique,  the detailed search strategy table provided below. This was specifically designed to cover a wide range of relevant domains.
 
 **2.1 Search Strategy and Data Sources**
-A comprehensive search strategy was formulated using a combination of terms related to AI methodologies and attention-related cognitive phenomena. The search spanned across five major academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. Seven separate query areas were defined to capture both technical and contextual diversity, resulting in an initial pool of 346 papers. These areas included AI/ML core terms, human-computer interaction, non-AI tools, digital distraction, education, and mental health.
+We used a comprehensive search strategy. We formulated this strategy using a combination of terms related to AI techniques and attention, and focus. The search was conducted across five major academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. Our research resulted in an initial pool of 346 papers. These areas included AI/ML core terms, human-computer interaction, or HCI. We also considered non-AI tools, digital distraction, education, and mental health.
 
 **Search Log Table**
 
