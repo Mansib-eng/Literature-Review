@@ -120,7 +120,7 @@ We used a comprehensive search strategy. We formulated this strategy using a com
 
 \subsection{PRISMA Steps}
 \textbf{Identification} \\ 
-In the identification phase, we gathered from seven CSV files, each CSV file contained results from literature searches conducted over the five academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. We performed the searches using keyword combinations related to "Artificial Intelligence", "Machine Learning", and "Attention/Focus". This stage resulted in 346 initial records. \\ \\
+In the identification phase, we gathered from seven CSV files, each CSV file contained results from literature searches conducted over the five academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. We performed the searches by combining keywords related to "Artificial Intelligence", "Machine Learning", and "Attention/Focus". This stage resulted in 346 initial records. \\ \\
 \textbf{Deduplication (DOI Link)} \\ 
 To eliminate duplicate studies, an automated Python program was used to compare the "DOI link" field across all records. As each DOI uniquely identifies a publication, this method reliably removes redundant entries. This step excluded 6 duplicate records, reducing the dataset to 340 unique papers. \\ \\
 \textbf{Deduplication (Paper Title)} \\ 
@@ -129,13 +129,13 @@ Some duplicate papers did not share an identical DOI link due to formatting issu
 In this stage, we wrote another Python program[21] to keep only the papers whose titles mentioned AI-related terms. 
 \begin{itemize}
     \item Firstly, we converted all characters to lowercase.
-    \item Then we replaced all the hyphens (-) and slashes (/) with spaces too, so that compound terms like "AI-based" and "AI/ML" become "AI-based" and "ai ml".
+    \item Then we replaced all the hyphens (-) and slashes (/) with spaces too, so that compound words like "AI-based" and "AI/ML" become "AI-based" and "ai ml".
 \end{itemize}
 
 The script then matched cleaned titles against a list of AI-related keywords using regex. Only titles containing terms like "\textbf{ai}", "\textbf{artificial intelligence}", "\textbf{ml}", "\textbf{machine learning}", "\textbf{dl}", or "\textbf{deep learning}" were retained. After this filtering step, the dataset was reduced from 337 to 140 papers.
  \\ \\
 \textbf{Attention \& Mental Health Filter} \\ 
-In this stage, we wrote another Python program[22] to keep only those papers whose titles aligned with the core of our research objective: \textbf{AI-powered methods for assessing attention and mental focus}. To ensure perfect matching, the program used a curated list of over 50 keywords related to \textbf{attention}, \textbf{cognitive function}, and \textbf{mental health} conditions such as "attention span", "cognitive load", "ADHD", and "working memory". In this step, the paper dataset was reduced to 102 papers. \\ \\
+In this stage, we wrote another Python program[22] to keep only those papers whose titles aligned with the core of our research objective: \textbf{AI-powered methods for assessing attention and mental focus}. To ensure perfect matching, the program used a curated list of over 50 keywords related to \textbf{attention}, \textbf{cognitive function}, and \textbf{mental health} conditions such as "attention-span", "cognitive-load", "ADHD", and "working memory". In this step, the paper dataset was reduced to 102 papers. \\ \\
 \textbf{AI-Driven Method Filter} \\ 
 In this stage, we again used a Python script[23]  to further refine the dataset by \textbf{including only those papers} whose titles mentioned AI-driven methodological terms. To achieve this, the script uses a list of AI method keywords, including terms such as "detection", "assessment", "modeling", "learning", "prediction", and "classification". Regex with word boundary matching ensured accurate filtering without capturing partial words. As a result, 84 papers were included in the final dataset. \\ \\
 \textbf{Contextual/Digital Setting Filter} \\ 
@@ -145,7 +145,7 @@ In this stage, we manually checked the 73 papers that passed all previous automa
 \textbf{Abstract Screening} \\ 
 In this stage, we manually reviewed the abstracts of the remaining 38 papers to determine their \textbf{high relevance} to the research topic. 
 
-We used the following five points to make the judgment:
+We used the following major points to make the judgment:
 \begin{itemize}
     \item \textbf{AI/ML techniques} applied to \textbf{attention or focus assessment}
     \item Use of relevant \textbf{datasets and metrics}
@@ -253,10 +253,10 @@ This table summarizes key extracted information from 19 reviewed research papers
 This section represents an analysis of what we found from the 19 reviewed papers. We analyze the paper on the basis of some questions related to Artificial Intelligence techniques, datasets, evaluation metrics, effectiveness, challenges, and future directions in Artificial Intelligence based attention assessment.
 
 \subsection{What Artificial Intelligence techniques are commonly used for assessing attention and focus in digital environments?}
-From the reviewed papers, a large range of Artificial Intelligence techniques were used to assess attention and focus, advancements in machine learning, and deep learning. These techniques were applied to different data types, such as physiological signals (such as, \textbf{EEG}), behavioral data (such as, \textbf{facial expressions}, \textbf{eye-tracking}), and environmental factors (such as, \textbf{video data from classrooms}).
+From the reviewed papers, a large range of Artificial Intelligence techniques were used to assess attention and focus, advancements in machine learning, and deep learning. These methods were applied to different datasets, such as physiological signals (such as, \textbf{EEG}), behavioral data (such as, \textbf{facial expressions}, \textbf{eye-tracking}), and environmental factors (such as, \textbf{video data from classrooms}).
 
 \begin{itemize}
-    \item \textbf{Deep Learning Models}: Deep learning methods, especially Convolutional \textbf{Neural Networks (CNNs)} and \textbf{Long Short-Term Memory (LSTM)} networks, were frequently used for attention detection tasks involving sequential or image data. As an example, \textbf{YOLOv3} and \textbf{YOLOv5} (Papers [1], [8]) were used to analyze real-time student behavior in classrooms and e-Learning environments. These models can have significant effectiveness in detecting attention by tracking facial expressions and body movements.
+    \item \textbf{Deep Learning Models}: Deep learning methods, especially Convolutional \textbf{Neural Networks (CNNs)} and \textbf{Long Short-Term Memory (LSTM)} networks, were frequently used for attention and focus detection tasks involving sequential or image data. As an example, \textbf{YOLOv3} and \textbf{YOLOv5} (Papers [1], [8]) were used to analyze real-time student behavior in classrooms and e-Learning environments. These models can have significant effectiveness in detecting attention by tracking facial expressions and body movements.
     \item \textbf{Support Vector Machines (SVM)}: \textbf{SVM} was another widely used method, especially for classification tasks involving \textbf{EEG} and \textbf{behavioral data}. SVM models were found to perform well in identifying attention-based patterns and cognitive states, especially in \textbf{ADHD} diagnosis and cognitive load estimation tasks (Papers [11], [12], [19]). Combining with methods like \textbf{Random Forest} or \textbf{Deep Neural Networks (DNNs)} the SVM classifiers can have high accuracy in detecting attention shifts.
     \item \textbf{Random Forest and Ensemble Methods}: \textbf{Random Forest}, \textbf{AdaBoost}, and \textbf{XGBoost} were used in various studies for tasks such as classifying attention in educational factors and diagnosing \textbf{ADHD}. These models provided robust results by combining multiple classifiers but small sample sizes cause overfitting (Papers [2], [13], [15]).
     \item \textbf{Behavioral and Physiological Data Integration}: An important section that the integration of multiple data types, such as \textbf{facial expression recognition (FER)}, \textbf{eye-tracking}, and \textbf{EEG data}. The integration of these features using machine learning techniques like \textbf{SVM} or \textbf{Deep Neural Networks (DNNs)} allowed for better prediction of attention levels (Papers [7], [16]). This combination of data types made the models stronger by balancing out the weaknesses.
@@ -280,7 +280,7 @@ Computer Vision & YOLO v3, Deep Learning, Computer Vision & 2 & [1], [8] \\
 \hline
 Machine Learning (ML) & Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree Classifier, Voting Classifier & 7 & [2], [3], [7], [9], [10], [12], [13] \\
 \hline
-Deep Learning (DL) & SDAE + MLP, LSTM + MLP, 1D CNN, CNN, BiLSTM, DNN & 8 & [3], [4], [6], [8], [11], [12], [18], [19] \\
+Deep Learning & SDAE + MLP, LSTM + MLP, 1D CNN, CNN, BiLSTM, DNN & 8 & [3], [4], [6], [8], [11], [12], [18], [19] \\
 \hline
 Hybrid Models & Hybrid cluster-based unsupervised learning, 1D CNN & 1 & [4] \\
 \hline
@@ -298,8 +298,8 @@ Reinforcement Learning & None & 0 & - \\
 \subsection{What datasets and evaluation metrics are used for Artificial Intelligence based attention assessment studies?}
 The datasets and evaluation metrics used in the reviewed studies varied greatly, reflecting the differences in attention-related tasks. From diagnostic assessments of different datasets and metrics were used to monitoring attention in real-time classroom factors and attention disorders like ADHD. \\ \\
 \textbf{Datasets:} A range of datasets was applied to assess attention and focus, with a focus on both behavioral data and physiological signals. \\ \\
-\textbullet \textbf{EEG-based datasets} were widely used in the context of cognitive load and attention deficit detection.  For example, the \textbf{ADHD-200} dataset provided a large collection of EEG data for ADHD classification (Papers [11], [19]). Also, EEG data from wearable devices were used in real-time attention estimation tasks (Papers [3], [4]).  \\ \\
-\textbullet \textbf{Eye-tracking datasets} were also common in attention studies, especially for analyzing visual attention in e-Learning and classroom environments. The \textbf{CEW dataset} and \textbf{OULAD dataset} provided data on eye states, pupil movements, and facial expressions (Papers [7], [9]).  \\ \\ \\
+\textbullet \textbf{EEG-based datasets} were most commonly used in the context of cognitive load and attention deficit detection.  For example, the \textbf{ADHD-200} dataset gave a large collection of EEG data for ADHD classification[11], [19]. Also, EEG data from wearable devices were used in real-time attention estimation tasks (Papers [3], [4]).  \\ \\
+\textbullet \textbf{Eye-tracking datasets} were also common in attention studies, especially for analyzing visual attention in e-Learning and classroom environments. The \textbf{CEW dataset} and \textbf{OULAD dataset} gave data on eye states, facial expressions and pupil movements. (Papers [7], [9]).  \\ \\ \\
 \textbullet \textbf{SPECT brain scans} were used in some studies to assess brain activity and its correlation with attention deficits (Paper [19]). These datasets used for understanding attention-related disorders in-depth.  \\ \\
 \textbullet \textbf{Facial expression datasets} were generally useful in assessing attention in facial expressions were linked to students' engagement levels (Papers [1], [9]).  \\ \\
 
@@ -310,7 +310,7 @@ The datasets and evaluation metrics used in the reviewed studies varied greatly,
 \textbullet \textbf{Homogeneity Score} and \textbf{Silhouette Coefficient} were used in unsupervised learning models to assess the quality of clustering in attention data (Paper [4]).  \\ 
 
 \subsection{How effective are machine learning models in detecting shifts in attention?} 
-The machine learning models demonstrated varying levels of effectiveness depending on the data types used and the context of the task: \\ 
+The machine learning models demonstrated varying levels of effectiveness depending on the dataset used and the context of the task: \\ 
 
 \textbullet \textbf{Real-Time Attention Monitoring:} It is used for monitoring attention in classroom and e-Learning environments, \textbf{Deep Learning} models such as \textbf{YOLOv3} and \textbf{YOLOv5} work brilliantly in real-time performance, detecting attention shifts with high accuracy (Paper [8]). These models were capable of processing video data to assess facial expressions and body movements, which are the main indicators of attention in educational settings. \\ \\ 
 \textbullet \textbf{EEG and Cognitive Load Estimation:} Deep learning models like \textbf{SDAE + MLP} and \textbf{LSTM + MLP} achieved accuracies of up to \textbf{85.42\%} for detecting shifts in cognitive load and attention using EEG (Paper [3]). These models were effective in detecting subtle shifts in attention during tasks of varying difficulty and also highlighting their potential in cognitive workload management.  \\ \\
@@ -358,7 +358,7 @@ No control for confounding factors (e.g., comorbidities) & 1 & Paper [15] \\
 
 The studies identify several important future directions for advancing Artificial Intelligence based attention assessment: \\
 
-\textbullet \textbf{Multimodal Approaches:} Combining multiple data types, such as \textbf{EEG}, \textbf{facial expressions}, and \textbf{eye-tracking}, was highlighted as a great direction for improving attention detection accuracy. Multimodal systems can reduce limitations of individual data types and create more robust models (Papers [1], [7], [8]). \\ 
+\textbullet \textbf{Multimodal Approaches:} Combining multiple data types, such as \textbf{EEG}, \textbf{facial expressions}, and \textbf{eye-tracking}, was highlighted as a great direction for improving attention detection accuracy. Multimodal systems can decrease limitations of individual data types and create more robust models (Papers [1], [7], [8]). \\ 
 
 \textbullet \textbf{Real-Time Systems and Scalability:} Future research should focus on developing \textbf{real-time attention monitoring systems} that can be used in dynamic environments such as classrooms or workplaces. Improving the scalability of Artificial Intelligence models for large usage, especially in large, diverse populations that can strengthen models (Papers [6], [16]). \\ 
 
