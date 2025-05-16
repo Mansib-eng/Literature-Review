@@ -307,3 +307,59 @@ In conclusion, Artificial Intelligence powered approaches to attention assessmen
 Despite these advancements, several challenges occur. **Limited sample sizes**, **concerns around data privacy** and **the dependence on specialized hardware** continue to effect broader adoption. To move forward, future research should prioritize building more generalizable models, developing larger and more diverse datasets, and advancing multimodal systems. These steps will make Artificial Intelligence powered attention assessment tools more accurate, ethical, and applicable in real-world scenarios.
 
 
+
+
+# 7. References: 
+
+[1] D. F. Terraza Arciniegas, M. Amaya, A. Piedrahita Carvajal, P. A. Rodriguez-Marin, L. Duque-Muñoz, and J. D. Martinez-Vargas, "Students' Attention Monitoring System in Learning Environments based on Artificial Intelligence," IEEE Latin America Transactions, vol. 20, no. 1, pp. 126–132, Jan. 2022, doi: 10.1109/TLA.2022.9662181.
+
+[2] P. Chakraborty, M. A. Yousuf, and S. Rahman, "Predicting Level of Visual Focus of Human’s Attention Using Machine Learning Approaches," in Proc. Int. Conf. Trends Comput. Cogn. Eng., Springer, Singapore, 2021, vol. 1309, doi: 10.1007/978-981-33-4673-4_56.
+
+[3] A. Saha, V. Minz, S. Bonela, S. R. Sreeja, R. Chowdhury, and D. Samanta, "Classification of EEG Signals for Cognitive Load Estimation Using Deep Learning Architectures," in Intelligent Human Computer Interaction (IHCI 2018), vol. 11278, Springer, Cham, 2018, doi: 10.1007/978-3-030-04021-5_6.
+
+[4] I. Hassan, M. Zolezzi, H. Khalil, R. M. Al Saady, S. Pedersen, and M. E. H. Chowdhury, "Cognitive Load Estimation Using a Hybrid Cluster-Based Unsupervised Machine Learning Technique," IEEE Access, vol. 12, pp. 118785–118801, 2024, doi: 10.1109/ACCESS.2024.3428691.
+
+[5] V. Tsakou and A. Drigas, "Early Detection of Preschool Children with ADHD and the role of mobile Apps and AI," Technium Social Sciences Journal, vol. 30, no. 1, pp. 127–137, 2022, doi: 10.47577/tssj.v30i1.6266.
+
+[6] Z. Abdelhadi, M. Naseif, W. Alhejali, and A. Elhayek, "TeacherEye: An AI-Powered System for Monitoring Student Engagement in Online Education," in Proc. 22nd Int. Learn. Technol. Conf. (L&T), Jeddah, Saudi Arabia, 2025, pp. 25–30, doi: 10.1109/LT64002.2025.10940905.
+
+[7] Q. Deng and Z. Wu, "Untitled," IOP Conf. Ser.: Earth Environ. Sci., vol. 199, p. 032042, 2018, doi: 10.1088/1755-1315/199/3/032042.
+
+[8] Z. Trabelsi, F. Alnajjar, M. M. A. Parambil, M. Gochoo, and L. Ali, "Real-Time Attention Monitoring System for Classroom: A Deep Learning Approach for Student’s Behavior Recognition," Big Data Cogn. Comput., vol. 7, p. 48, 2023, doi: 10.3390/bdcc7010048.
+
+[9] N. Alruwais and M. Zakariah, "Student-Engagement Detection in Classroom Using Machine Learning Algorithm," Electronics, vol. 12, p. 731, 2023, doi: 10.3390/electronics12030731.
+
+[10] S. S. Abdul Hamid, N. Admodisastro, N. Manshor, A. Kamaruddin, and A. A. A. Ghani, "Dyslexia Adaptive Learning Model: Student Engagement Prediction Using Machine Learning Approach," in Recent Advances on Soft Computing and Data Mining (SCDM 2018), vol. 700, Springer, Cham, 2018, doi: 10.1007/978-3-319-72550-5_36.
+
+[11] C. Nash, R. Nair, and S. M. Naqvi, "Machine Learning in ADHD and Depression Mental Health Diagnosis: A Survey," IEEE Access, vol. 11, pp. 86297–86317, 2023, doi: 10.1109/ACCESS.2023.3304236.
+
+[12] M. Cao, E. Martin, and X. Li, "Machine learning in attention-deficit/hyperactivity disorder: new approaches toward understanding the neural mechanisms," Transl Psychiatry, vol. 13, p. 236, 2023, doi: 10.1038/s41398-023-02536-w.
+
+[13] T. Chen, G. Antoniou, M. Adamou, I. Tachmazidis, and P. Su, "Automatic Diagnosis of Attention Deficit Hyperactivity Disorder Using Machine Learning," Applied Artificial Intelligence, vol. 35, no. 9, pp. 657–669, 2021, doi: 10.1080/08839514.2021.1933761.
+
+[14] M. D. Heller, K. Roots, S. Srivastava, J. Schumann, J. Srivastava, and T. S. Hale, "A Machine Learning-Based Analysis of Game Data for Attention Deficit Hyperactivity Disorder Assessment," Games for Health Journal, vol. 2, no. 5, pp. 291–298, 2013, doi: 10.1089/g4h.2013.0058.
+
+[15] D. Andrikopoulos, G. Vassiliou, P. Fatouros et al., "Machine learning-enabled detection of attention-deficit/hyperactivity disorder with multimodal physiological data: a case-control study," BMC Psychiatry, vol. 24, p. 547, 2024, doi: 10.1186/s12888-024-05987-7.
+
+[16] M. E. Minissi, I. A. Chicchi Giglioli, F. Mantovani et al., "Assessment of the Autism Spectrum Disorder Based on Machine Learning and Social Visual Attention: A Systematic Review," J Autism Dev Disord, vol. 52, pp. 2187–2202, 2022, doi: 10.1007/s10803-021-05106-5.
+
+[17] L. Caselles-Pina, A. Quesada-López, A. Sújar, E. M. Garzón Hernández, and D. Delgado-Gómez, "A systematic review on the application of machine learning models in psychometric questionnaires for the diagnosis of attention deficit hyperactivity disorder," Eur. J. Neurosci., vol. 60, no. 3, pp. 4115–4127, 2024, doi: 10.1111/ejn.16288.
+
+[18] Ö. Kasim, "Identification of attention deficit hyperactivity disorder with deep learning model," Phys. Eng. Sci. Med., vol. 46, pp. 1081–1090, 2023, doi: 10.1007/s13246-023-01275-y.
+
+[19] M. de O. Meira, A. M. de P. Canuto, B. M. de Carvalho, and R. L. C. Jales, "Comparison of Machine Learning predictive methods to diagnose the Attention Deficit/Hyperactivity Disorder levels using SPECT," Research, Society and Development, vol. 11, no. 8, p. e54811831258, 2022, doi: 10.33448/rsd-v11i8.31258.
+
+[20] Duplicate paper removed program, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/1%20Duplicate%20Removed](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/1%20Duplicate%20Removed)
+
+[21] Program to keep only the papers whose titles mentioned AI-related terms, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/2%20Removed%20Paper%20that%20don't%20have%20AI%20or%20ML%20or%20Deep%20Learning%20in%20their%20Title](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/2%20Removed%20Paper%20that%20don't%20have%20AI%20or%20ML%20or%20Deep%20Learning%20in%20their%20Title)
+
+[22] Program to keep only those papers whose titles aligned with the core of our research objective, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/3%20Removed%20papers%20that%20dont%20have%20Attention%20%26%20Mental%20Health%20In%20their%20Title](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/3%20Removed%20papers%20that%20dont%20have%20Attention%20%26%20Mental%20Health%20In%20their%20Title)
+
+[23] Program to further refine the dataset by including only those papers whose titles mentioned AI-driven methodological terms, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/4%20Included%20papers%20%20with%20AI-method%20terms%20In%20their%20Title](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/4%20Included%20papers%20%20with%20AI-method%20terms%20In%20their%20Title)
+
+[24] Program to keep only those papers whose titles mentioned a digital environment relevant to AI-powered attention research, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/5%20Included%20Papers%20that%20have%20Digital%20age%20context%20in%20their%20title](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/PRISMA/5%20Included%20Papers%20that%20have%20Digital%20age%20context%20in%20their%20title)
+
+[25] Full paper dataset, [Online]. Available: [https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/Search%20Log](https://github.com/Mansib-eng/Literature-Review/tree/main/Research%20Work/Search%20Log)
+
+
+
