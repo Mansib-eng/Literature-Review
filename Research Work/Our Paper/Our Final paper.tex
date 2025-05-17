@@ -1,11 +1,14 @@
-\documentclass[12pt]{article}
+\documentclass[twocolumn,12pt]{article}
+
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}       % improved justification
 \usepackage{graphicx}
-\usepackage{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{longtable}
 \usepackage{xcolor}
-\usepackage{soulutf8}  % for highlighting and utf8-safe \hl
-\usepackage{microtype} % better justification
+\usepackage{soulutf8}        % utf8-safe highlighting
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -14,13 +17,11 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{fancyhdr}
-\usepackage{tcolorbox} % for abstract box
-\usepackage{colortbl}  % for row colors in tables
-\usepackage{natbib}    % for \citealp (author-year, no brackets)
+\usepackage{tcolorbox}       % abstract box
+\usepackage{colortbl}        % table row colors
+\usepackage{natbib}          % author-year citations
 
-\geometry{margin=1in}
-
-% Hyperref options for colored links and better pdf metadata
+% Hyperref setup
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -31,22 +32,43 @@
     pdfstartview=FitH
 }
 
-% Colored section titles
+% Colors
+\definecolor{teal}{RGB}{0,128,128}
+\definecolor{lightgray}{gray}{0.93}
+
+% Section title formatting
 \titleformat{\section}{\large\bfseries\color{teal}}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries\color{teal}}{\thesubsection.}{0.5em}{}
 
-% Improved list spacing
+% Reduce vertical spacing around sections
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
+\titlespacing*{\subsection}{0pt}{6pt plus 1pt minus 1pt}{4pt plus 1pt minus 1pt}
+
+% List spacing (compact)
 \setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*, label=\textbullet}
 
-% Fancy footer with page numbers centered
+% Paragraph spacing and indentation
+\setlength{\parskip}{0.5ex plus0.2ex minus0.2ex}
+\setlength{\parindent}{0pt}
+
+% Justify text fully and reduce large gaps on bottom
+\raggedbottom
+\sloppy
+
+% Reduce spacing around floats
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+
+% Fancy footer with page number centered
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
-% Table row coloring for better readability
-\definecolor{lightgray}{gray}{0.9}
+% Table setup: ragged right inside cells for better wrapping & smaller font for big tables
+\newcommand{\tablecell}[1]{\raggedright\footnotesize #1}
 
-% tcolorbox for abstract
+% tcolorbox for abstract with subtle background
 \newtcolorbox{abstractbox}{
   colback=gray!10!white,
   colframe=gray!50!black,
@@ -59,26 +81,49 @@
   breakable
 }
 
-% Custom caption colors
+% Caption setup
 \captionsetup{
   labelfont={bf, color=teal},
-  textfont=it
+  textfont=it,
+  font=small,
+  belowskip=4pt,
+  aboveskip=4pt
 }
 
-% Make percent signs easy to type by defining \pct command
+% Percent command shortcut
 \newcommand{\pct}{\%}
 
-\title{A Systematic Review on AI-Powered Methods for Assessing Attention and Focus in the Digital Age}
-\author{}
+\usepackage{titling}      % for custom title spacing
+\usepackage{setspace}     % for line spacing adjustments
+
+
+\title{\textbf{A Systematic Review on AI-Powered Methods for Assessing Attention and Focus in the Digital Age}}
+
+\author{
+    Arfatul Islam Asif \\
+    \href{mailto:arfatulislam2001@gmail.com}{\texttt{arfatulislam2001@gmail.com}}
+    \and
+    Ibnul Mansib \\
+    \href{mailto:ibnulmansib@gmail.com}{\texttt{ibnulmansib@gmail.com}}
+}
+
+
 \date{}
 
 \begin{document}
 
+% Wide title + abstract box spanning both columns
+\twocolumn[
 \maketitle
-
+\vspace{-3em}
+\vspace{1em}
 \begin{abstractbox}
 In today's world, our attention and focus are constantly broken due to regular interaction with technology. In our daily life, we spend quite some time with our smartphones, computers, and other devices. Due to the increase in screen time, our thought process has suffered greatly. With that in mind, it was obvious to realize the need for intelligent systems capable of monitoring, assessing, and increasing attention and focus. Artificial Intelligence or AI, particularly machine learning and deep learning models, has shown great promise in automating the detection and evaluation of mental health issues such as attention and focus. This review paper examines the status of AI-powered methods for assessing attention and focus in digital environments. We followed PRISMA guidelines to identify and filter relevant literature across five major databases, ultimately narrowing it down to 19 highly matched papers. Our systematic literature review focuses on the AI-powered techniques, common datasets used, the evaluation metrics used, and applications such as online learning, mobile usage, and social media, and their role in assessing attention and focus. From our work, the key findings reveal that most of the AI-powered methodologies have a great reliance on supervised learning algorithms and techniques. Our paper ends with mentioning the current challenges and recommending directions for future research.
 \end{abstractbox}
+\vspace{0.5em}
+\noindent \textbf{Keywords:} Artificial Intelligence, Machine Learning, Deep Learning, Attention assessment, Focus detection, Cognitive load estimation, ADHD, EEG datasets, Multimodal data integration, Real-time attention monitoring, Explainable Artificial Intelligence, Data privacy and ethical concerns
+\vspace{1em}
+]
 
 \section{Introduction}
 Attention and focus are the two greatest components of human psychology. They are most important in learning, understanding, productivity in daily life, and mental health. However, the frequent use of technology such as smartphones and social media platforms in the online education system has introduced new challenges for mental health issues, especially with learning, keeping up attention, and focus while doing so.
@@ -93,12 +138,15 @@ This systematic literature review aims to critically analyze the studies that us
 Our review process follows the systematic methodology described in the PRISMA framework. The process involved designing a search term, multiple database queries, filtering papers, and then manual screening, as mentioned below. We used a very intelligent search technique, the detailed search strategy table provided below. This was specifically designed to cover a wide range of relevant domains.
 
 \subsection{Search Strategy and Data Sources} 
-We used a comprehensive search strategy. We formulated this strategy using a combination of terms related to AI techniques and attention, and focus. The search was conducted across five major academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. Our search finally resulted in an initial pool of 346 papers. These areas included AI/ML core terms, human-computer interaction, or HCI. We also considered non-AI tools, digital distraction, education, and mental health. \\
+We used a comprehensive search strategy. We created this strategy using a concatenation of AI related terms along with attention, and focus. The search was conducted across five major academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. Our search finally resulted in an initial pool of 346 papers. These areas included AI/ML core terms, human-computer interaction, or HCI. We also considered non-AI tools, digital distraction, education, and mental health. \\
 
 \begin{table}[H]
+\scriptsize                          % Smaller font
+\setlength{\tabcolsep}{4pt}         % Less horizontal padding
+\renewcommand{\arraystretch}{0.5}   % Tighter row height
 \caption{Search Log Table}
 \rowcolors{2}{lightgray}{white}
-\begin{tabular}{|p{0.30\textwidth}|p{0.60\textwidth}|p{0.10\textwidth}|}
+\begin{tabular}{|p{0.35\columnwidth}|p{0.50\columnwidth}|p{0.12\columnwidth}|}
 \hline
 \textbf{Main Area} & \textbf{Search Terms} & \textbf{Paper Count} \\
 \hline
@@ -119,6 +167,7 @@ We used a comprehensive search strategy. We formulated this strategy using a com
 \end{tabular}
 \end{table}
 
+
 \subsection{PRISMA Steps}
 \textbf{Identification} \\ 
 In the identification phase, we gathered from seven CSV files, each CSV file contained results from literature searches conducted over the five academic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, and PubMed. We performed the searches by combining keywords related to "Artificial Intelligence", "Machine Learning", and "Attention/Focus". This stage resulted in 346 initial records. \\ \\
@@ -130,15 +179,15 @@ Some duplicate papers did not share an identical DOI link due to formatting issu
 In this stage, we wrote another Python program[21] to keep only the papers whose titles mentioned AI-related terms. 
 \begin{itemize}
     \item Firstly, we converted all characters to lowercase.
-    \item Then we replaced all the hyphens (-) and slashes (/) with spaces too, so that compound words like "AI-based" and "AI/ML" become "AI-based" and "ai ml".
+    \item Then we replaced all the hyphens (-) and slashes (/) with spaces too, so that compound words like "AI-based" and "AI/ML" become "AI based" and "ai ml".
 \end{itemize}
 
 The script then matched cleaned titles against a list of AI-related keywords using regex. Only titles containing terms like "\textbf{ai}", "\textbf{artificial intelligence}", "\textbf{ml}", "\textbf{machine learning}", "\textbf{dl}", or "\textbf{deep learning}" were retained. After this filtering step, the dataset was reduced from 337 to 140 papers.
  \\ \\
 \textbf{Attention \& Mental Health Filter} \\ 
-In this stage, we wrote another Python program[22] to keep only those papers whose titles aligned with the core of our research objective: \textbf{AI-powered methods for assessing attention and mental focus}. To ensure perfect matching, the program used a curated list of over 50 keywords related to \textbf{attention}, \textbf{cognitive function}, and \textbf{mental health} conditions such as "attention-span", "cognitive-load", "ADHD", and "working memory". In this step, the paper dataset was reduced to 102 papers. \\ \\
+We wrote another Python program[22] to keep only the papers whose titles aligned with the core of our research objective. To ensure that we have a perfect matching, the program used a list of over 50 words related to attention, cognitive function, and mental health conditions such as ”attention-span”, ”cognitive-load”, ”ADHD”, and ”working memory”. In this step, the paper dataset was reduced to 102 papers. \\ \\ \\
 \textbf{AI-Driven Method Filter} \\ 
-In this stage, we again used a Python script[23]  to further refine the dataset by \textbf{including only those papers} whose titles mentioned AI-driven methodological terms. To achieve this, the script uses a list of AI method keywords, including terms such as "detection", "assessment", "modeling", "learning", "prediction", and "classification". Regex with word boundary matching ensured accurate filtering without capturing partial words. As a result, 84 papers were included in the final dataset. \\ \\
+We again used a Python program[23] to further filter the dataset by including only those papers whose titles mentioned AI related methodological terms. To achieve this, the script uses a list of AI method words, including terms such as ”detection”, "assessment", "modeling", "learning", "prediction", and "classification". Regular Expression (regex) with word matching ensured accurate filtering. As a result, 84 papers were included in the final dataset. \\ \\
 \textbf{Contextual/Digital Setting Filter} \\ 
 In this step, we used another Python script[24] to keep only those papers whose titles mentioned a digital environment relevant to AI-powered attention research. The script matched the cleaned titles against a list of keywords representing digital platforms, educational settings, such as "digital", "learning", "social media", "application", "user behavior", and "human factors". The process reduced the dataset from 84 to \textbf{73 papers}. \\ \\
 \textbf{Manual Title Screening} \\ 
@@ -155,14 +204,24 @@ We used the following major points to make the judgment:
     \item Suggestions for \textbf{future directions}
 \end{itemize}
 
-Papers that clearly addressed these points in digital environments, such as online learning, smart classrooms, and real-time monitoring systems, were kept. The process resulted in \textbf{25 papers}. These are the papers that are mostly aligned with our research. \\ \\
+Papers that clearly addressed these points in digital environments, such as online learning, smart classrooms, and real-time monitoring systems, were kept. The process resulted in \textbf{25 papers}. These are the papers that are mostly aligned with our research. \\ \\ \\
 \textbf{PDF Retrieval} \\ 
 Out of the 25 papers that we selected after abstract screening, we found full-text PDFs for 19 papers. These are the final \textbf{19 papers}.\\ \\
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\hspace{2cm}
+\includegraphics[width=0.27\textwidth]{Prisma.png}
+\caption{PRISMA Flowchart}
+\end{figure}
+
 \begin{table}[H]
 \centering
+\hspace{2cm}
 \caption{PRISMA Log Table}
 \rowcolors{2}{lightgray}{white}
-\begin{tabular}{|p{0.22\textwidth}|p{0.42\textwidth}|p{0.15\textwidth}|p{0.15\textwidth}|}
+\begin{tabular}{|p{0.50\columnwidth}|p{0.70\columnwidth}|p{0.25\columnwidth}|p{0.20\columnwidth}|}
 \hline
 \textbf{Stage} & \textbf{Criteria} & \textbf{Included / Excluded} & \textbf{Paper Remaining Count} \\
 \hline
@@ -189,66 +248,69 @@ PDF Retrieval & Successfully retrieved full-text PDF versions of selected papers
 \end{tabular}
 \end{table}
 
-\vspace{50em}
-\captionof{figure}{PRISMA-Style Systematic Review Flowchart}
-\begin{figure}[H]
-\centering
-\includegraphics[width=.25\textwidth]{Prisma.png}
-\end{figure}
 
 
-\vspace{50em}
+% Long table: temporarily switch to one column for better fit
+\onecolumn
+\vspace{1em}
 \section{Data Extraction}
 This table summarizes key extracted information from 19 reviewed research papers related to AI based attention monitoring, focus, and engagement detection.
+
 \rowcolors{2}{lightgray}{white}
-\begin{longtable}{|p{0.03\textwidth}|p{0.15\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|p{0.10\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|}
+
+{\scriptsize % smaller font for the entire table
+\setlength{\tabcolsep}{3pt}       % reduce horizontal padding (default ~6pt)
+\renewcommand{\arraystretch}{0.85} % reduce vertical padding (default 1.0)
+
+\begin{longtable}{|p{0.03\textwidth}|p{0.16\textwidth}|p{0.15\textwidth}|p{0.14\textwidth}|p{0.09\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}|p{0.15\textwidth}|}
 \hline
-\textbf{No.} & \textbf{Paper Title} & \textbf{AI Techniques Used} & \textbf{Dataset Description} & \textbf{Evaluation Metrics} & \textbf{Reported Accuracy / Effectiveness} & \textbf{Key Challenges Noted} & \textbf{Future Directions Suggested} \\
+\textbf{No.} & \tablecell{\textbf{Paper Title}} & \tablecell{\textbf{AI Techniques Used}} & \tablecell{\textbf{Dataset Description}} & \tablecell{\textbf{Evaluation Metrics}} & \tablecell{\textbf{Reported Accuracy / Effectiveness}} & \tablecell{\textbf{Key Challenges Noted}} & \tablecell{\textbf{Future Directions Suggested}} \\
 \hline
 \endfirsthead
 \hline
-\textbf{No.} & \textbf{Paper Title} & \textbf{AI Techniques Used} & \textbf{Dataset Description} & \textbf{Evaluation Metrics} & \textbf{Reported Accuracy / Effectiveness} & \textbf{Key Challenges Noted} & \textbf{Future Directions Suggested} \\
+\textbf{No.} & \tablecell{\textbf{Paper Title}} & \tablecell{\textbf{AI Techniques Used}} & \tablecell{\textbf{Dataset Description}} & \tablecell{\textbf{Evaluation Metrics}} & \tablecell{\textbf{Reported Accuracy / Effectiveness}} & \tablecell{\textbf{Key Challenges Noted}} & \tablecell{\textbf{Future Directions Suggested}} \\
 \hline
 \endhead
-1 & Student’s Attention Monitoring System in Learning Environments based on Artificial Intelligence [1] & YOLO v3, Deep Learning, Computer Vision & Facial expressions, head pose, motion data from video conferences & Accuracy, Attention \%, Facial Expression Detection & High real-time monitoring accuracy & Real-time performance, virtual learning limitations, facial expression analysis & Multi-modal learning, real-time behavior analysis, virtual engagement \\
+1 & \tablecell{Student’s Attention Monitoring System in Learning Environments based on Artificial Intelligence [1]} & \tablecell{YOLO v3, Deep Learning, Computer Vision} & \tablecell{Facial expressions, head pose, motion data from video conferences} & \tablecell{Accuracy, Attention \%, Facial Expression Detection} & \tablecell{High real-time monitoring accuracy} & \tablecell{Real-time performance, virtual learning limitations, facial expression analysis} & \tablecell{Multi-modal learning, real-time behavior analysis, virtual engagement} \\
 \hline
-2 & Predicting Level of Visual Focus of Human’s Attention Using ML Approaches [2] & Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree, Voting Classifier & Survey reports + eyeball tracking & Accuracy & LR: 96\%, Voting: 95\% & Small sample, self-report bias, simple hardware & Larger diverse samples, personalization, real-time data \\
+2 & \tablecell{Predicting Level of Visual Focus of Human’s Attention Using ML Approaches [2]} & \tablecell{Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree, Voting Classifier} & \tablecell{Survey reports + eyeball tracking} & \tablecell{Accuracy} & \tablecell{LR: 96\%, Voting: 95\%} & \tablecell{Small sample, self-report bias, simple hardware} & \tablecell{Larger diverse samples, personalization, real-time data} \\
 \hline
-3 & Classification of EEG Signals for Cognitive Load Estimation Using DL Architectures [3] & SDAE+MLP, LSTM+MLP, SVM, KNN, LDA & EEG data (64-channel) at IIT Kharagpur & Accuracy & LSTM+MLP: 85.42\% & Small dataset, subject variability, denoising & Larger datasets, personalization, hybrid models \\
+3 & \tablecell{Classification of EEG Signals for Cognitive Load Estimation Using DL Architectures [3]} & \tablecell{SDAE+MLP, LSTM+MLP, SVM, KNN, LDA} & \tablecell{EEG data (64-channel) at IIT Kharagpur} & \tablecell{Accuracy} & \tablecell{LSTM+MLP: 85.42\%} & \tablecell{Small dataset, subject variability, denoising} & \tablecell{Larger datasets, personalization, hybrid models} \\
 \hline
-4 & Cognitive Load Estimation Using Hybrid Cluster-Based Unsupervised ML Technique [4] & Hybrid clustering, 1D CNN & 4-channel wearable EEG (Baseline \& Stroop test) & Accuracy, Homogeneity, ARI, SC & Accuracy: 93.2\%, ARI: 0.78 & Generalization, real-world application & Real-time estimation, low manual effort \\
+4 & \tablecell{Cognitive Load Estimation Using Hybrid Cluster-Based Unsupervised ML Technique [4]} & \tablecell{Hybrid clustering, 1D CNN} & \tablecell{4-channel wearable EEG (Baseline \& Stroop test)} & \tablecell{Accuracy, Homogeneity, ARI, SC} & \tablecell{Accuracy: 93.2\%, ARI: 0.78} & \tablecell{Generalization, real-world application} & \tablecell{Real-time estimation, low manual effort} \\
 \hline
-5 & Early Detection of Preschool Children with ADHD Using AI \& Mobile Apps [5] & Mobile apps, AI tools, video analytics & Psychometric scales, behavioral data, app usage & DSM-5/ICD-10, clinical validation & Mobile apps effective for early detection & Subjectivity, comorbidity, over/under-diagnosis & Larger validation, explainable AI, early intervention \\
+5 & \tablecell{Early Detection of Preschool Children with ADHD Using AI \& Mobile Apps [5]} & \tablecell{Mobile apps, AI tools, video analytics} & \tablecell{Psychometric scales, behavioral data, app usage} & \tablecell{DSM-5/ICD-10, clinical validation} & \tablecell{Mobile apps effective for early detection} & \tablecell{Subjectivity, comorbidity, over/under-diagnosis} & \tablecell{Larger validation, explainable AI, early intervention} \\
 \hline
-6 & TeacherEye: AI-Powered Monitoring System for Online Education [6] & DeepFace, VGG-Face, Dlib, MediaPipe, GPT-4 & Webcam video/audio, face images, speech clips & Recall, WER, Precision & Face ID: 100\%, Audio: 92.6\%, Cheating: 80\% & Privacy, false positives, sensory limits & On-device processing, GUI integration \\
+6 & \tablecell{TeacherEye: AI-Powered Monitoring System for Online Education [6]} & \tablecell{DeepFace, VGG-Face, Dlib, MediaPipe, GPT-4} & \tablecell{Webcam video/audio, face images, speech clips} & \tablecell{Recall, WER, Precision} & \tablecell{Face ID: 100\%, Audio: 92.6\%, Cheating: 80\%} & \tablecell{Privacy, false positives, sensory limits} & \tablecell{On-device processing, GUI integration} \\
 \hline
-7 & Students’ Attention Assessment in eLearning with ML [7] & Gabor, SVM, NBC, KNN, PCA, facial landmarks & CEW dataset (eye state), 32x32 pixel images & Classification Accuracy & Gabor+SVM: 93.1\% & Binary classification only, frontal face required & Blink detection, diverse attention features \\
+7 & \tablecell{Students’ Attention Assessment in eLearning with ML [7]} & \tablecell{Gabor, SVM, NBC, KNN, PCA, facial landmarks} & \tablecell{CEW dataset (eye state), 32x32 pixel images} & \tablecell{Classification Accuracy} & \tablecell{Gabor+SVM: 93.1\%} & \tablecell{Binary classification only, frontal face required} & \tablecell{Blink detection, diverse attention features} \\
 \hline
-8 & Real-Time Attention Monitoring with DL [8] & YOLOv5, DeepSORT & 5,701 action images + 35,000 emotion images & Precision, Recall, mAP@0.5, F1 & Action: 76\% mAP, Emotion: 87.7\% mAP & Small dataset, privacy & Multi-modal fusion, explainable AI \\
+8 & \tablecell{Real-Time Attention Monitoring with DL [8]} & \tablecell{YOLOv5, DeepSORT} & \tablecell{5,701 action images + 35,000 emotion images} & \tablecell{Precision, Recall, mAP@0.5, F1} & \tablecell{Action: 76\% mAP, Emotion: 87.7\% mAP} & \tablecell{Small dataset, privacy} & \tablecell{Multi-modal fusion, explainable AI} \\
 \hline
-9 & Student-Engagement Detection in Classroom Using ML [9] & CATBoost, XGBoost, LightGBM & OULAD dataset (32,593 records) & Accuracy, F1, AUC-ROC & CATBoost: 92.23\%, AUC: 0.9626 & Class imbalance & Adaptive interventions \\
+9 & \tablecell{Student-Engagement Detection in Classroom Using ML [9]} & \tablecell{CATBoost, XGBoost, LightGBM} & \tablecell{OULAD dataset (32,593 records)} & \tablecell{Accuracy, F1, AUC-ROC} & \tablecell{CATBoost: 92.23\%, AUC: 0.9626} & \tablecell{Class imbalance} & \tablecell{Adaptive interventions} \\
 \hline
-10 & Dyslexia Adaptive Learning Model: Engagement Prediction [10] & SVM, BoF, k-Means & 600 face images (30 students) & Accuracy & SVM Linear: 97.8\% & Small sample, occlusion & Integrate video \\
+10 & \tablecell{Dyslexia Adaptive Learning Model: Engagement Prediction [10]} & \tablecell{SVM, BoF, k-Means} & \tablecell{600 face images (30 students)} & \tablecell{Accuracy} & \tablecell{SVM Linear: 97.8\%} & \tablecell{Small sample, occlusion} & \tablecell{Integrate video} \\
 \hline
-11 & ML in ADHD and Depression Mental Health Diagnosis: A Survey [11] & SVM, CNN, Random Forest & ADHD-200 (973), DAIC-WOZ (142) & Accuracy, AUC & ADHD: 99.58\%, Depression: 100\% (EEG) & Data imbalance & Multimodal datasets \\
+11 & \tablecell{ML in ADHD and Depression Mental Health Diagnosis: A Survey [11]} & \tablecell{SVM, CNN, Random Forest} & \tablecell{ADHD-200 (973), DAIC-WOZ (142)} & \tablecell{Accuracy, AUC} & \tablecell{ADHD: 99.58\%, Depression: 100\% (EEG)} & \tablecell{Data imbalance} & \tablecell{Multimodal datasets} \\
 \hline
-12 & ML in ADHD: Neural Mechanism Analysis [12] & SVM, DNN, LASSO & ADHD-200, ABCD & AUC, Sensitivity & 60-90\% Accuracy & Small samples & Generative models \\
+12 & \tablecell{ML in ADHD: Neural Mechanism Analysis [12]} & \tablecell{SVM, DNN, LASSO} & \tablecell{ADHD-200, ABCD} & \tablecell{AUC, Sensitivity} & \tablecell{60-90\% Accuracy} & \tablecell{Small samples} & \tablecell{Generative models} \\
 \hline
-13 & Automatic Diagnosis of ADHD Using ML [13] & Decision Tree, Random Forest, SVM & NHS data (69 patients) & AUC & DT: 85.5\%, AUC: 0.871 & Overfitting & Fuzzy rule-based models \\
+13 & \tablecell{Automatic Diagnosis of ADHD Using ML [13]} & \tablecell{Decision Tree, Random Forest, SVM} & \tablecell{NHS data (69 patients)} & \tablecell{AUC} & \tablecell{DT: 85.5\%, AUC: 0.871} & \tablecell{Overfitting} & \tablecell{Fuzzy rule-based models} \\
 \hline
-14 & Game Data Analysis for ADHD Assessment [14] & AdaBoost, JRip & Sifteo Cubes, 52 subjects & F-measure & 75-78\% Accuracy & Hardware limits & Neuroplasticity integration \\
+14 & \tablecell{Game Data Analysis for ADHD Assessment [14]} & \tablecell{AdaBoost, JRip} & \tablecell{Sifteo Cubes, 52 subjects} & \tablecell{F-measure} & \tablecell{75-78\% Accuracy} & \tablecell{Hardware limits} & \tablecell{Neuroplasticity integration} \\
 \hline
-15 & ADHD Detection Using Multimodal Physiological Data [15] & SVM, Random Forest & 76 adults & Accuracy & SVM: 81.6\% & No comorbidity control & Larger validations \\
+15 & \tablecell{ADHD Detection Using Multimodal Physiological Data [15]} & \tablecell{SVM, Random Forest} & \tablecell{76 adults} & \tablecell{Accuracy} & \tablecell{SVM: 81.6\%} & \tablecell{No comorbidity control} & \tablecell{Larger validations} \\
 \hline
-16 & Autism Spectrum Disorder Assessment Using ML [16] & LSTM, CNN, SVM & Eye-tracking datasets & AUC & Up to 93.7\% (SVM) & Ecological validity & VR tool integration \\
+16 & \tablecell{Autism Spectrum Disorder Assessment Using ML [16]} & \tablecell{LSTM, CNN, SVM} & \tablecell{Eye-tracking datasets} & \tablecell{AUC} & \tablecell{Up to 93.7\% (SVM)} & \tablecell{Ecological validity} & \tablecell{VR tool integration} \\
 \hline
-17 & ML on Psychometric Questionnaires for ADHD [17] & 12+ ML techniques & 35–13,000 participants & AUC & AUC: 0.56–0.992 & Subjectivity & Multi-informant model \\
+17 & \tablecell{ML on Psychometric Questionnaires for ADHD [17]} & \tablecell{12+ ML techniques} & \tablecell{35–13,000 participants} & \tablecell{AUC} & \tablecell{AUC: 0.56–0.992} & \tablecell{Subjectivity} & \tablecell{Multi-informant model} \\
 \hline
-18 & ADHD Identification with Deep Learning [18] & BiLSTM, MVMD & 121-subject EEG data & ROC-AUC & Accuracy: 95.54\% & EEG artifacts & Real-time system \\
+18 & \tablecell{ADHD Identification with Deep Learning [18]} & \tablecell{BiLSTM, MVMD} & \tablecell{121-subject EEG data} & \tablecell{ROC-AUC} & \tablecell{Accuracy: 95.54\%} & \tablecell{EEG artifacts} & \tablecell{Real-time system} \\
 \hline
-19 & ADHD Diagnosis Using SPECT with ML [19] & SVM, KNN & 236 brain scans & F-measure & Accuracy: 98\% & Class imbalance & Subtype classification \\
+19 & \tablecell{ADHD Diagnosis Using SPECT with ML [19]} & \tablecell{SVM, KNN} & \tablecell{236 brain scans} & \tablecell{F-measure} & \tablecell{Accuracy: 98\%} & \tablecell{Class imbalance} & \tablecell{Subtype classification} \\
 \hline
 \end{longtable}
+\twocolumn
 
 \section{Results}
 This section represents an analysis of what we found from the 19 reviewed papers. We analyze the paper on the basis of some questions related to Artificial Intelligence techniques, datasets, evaluation metrics, effectiveness, challenges, and future directions in Artificial Intelligence based attention assessment.
@@ -265,21 +327,27 @@ From the reviewed papers, a large range of Artificial Intelligence techniques we
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{piechart.png}
+\includegraphics[width=0.5\textwidth]{piechart.png}
 \caption{Distribution of AI Techniques Used}
+\label{fig:piechart}
 \end{figure}
+
+\vspace{1em} % small vertical space between figure and table
 
 \begin{table}[H]
 \centering
+\footnotesize               % smaller font size
+\setlength{\tabcolsep}{2pt} % reduce horizontal padding (default ~6pt)
+\renewcommand{\arraystretch}{.5} % reduce vertical row spacing (default 1.0)
 \caption{AI Subfields and Techniques Summary}
 \rowcolors{2}{lightgray}{white}
-\begin{tabular}{|p{4.5cm}|p{6cm}|p{2cm}|p{4cm}|}
+\begin{tabular}{|p{2cm}|p{3cm}|p{1.5cm}|p{2.5cm}|}
 \hline
 \textbf{AI Subfield} & \textbf{Techniques Used} & \textbf{Number of Papers} & \textbf{Paper Numbers} \\
 \hline
-Computer Vision & YOLO v3, Deep Learning, Computer Vision & 2 &  Papers~([\citealp{ref1}], [\citealp{ref8}]) \\
+Computer Vision & YOLO v3, Deep Learning, Computer Vision & 2 & Papers~([\citealp{ref1}], [\citealp{ref8}]) \\
 \hline
-Machine Learning (ML) & Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree Classifier, Voting Classifier & 7 &  Papers~([\citealp{ref2}], [\citealp{ref3}], [\citealp{ref7}], [\citealp{ref9}], [\citealp{ref10}], [\citealp{ref12}], [\citealp{ref13}]) \\
+Machine Learning (ML) & Logistic Regression, SVM, Decision Tree, KNN, AdaBoost, MLP, Extra Tree Classifier, Voting Classifier & 7 & Papers~([\citealp{ref2}], [\citealp{ref3}], [\citealp{ref7}], [\citealp{ref9}], [\citealp{ref10}], [\citealp{ref12}], [\citealp{ref13}]) \\
 \hline
 Deep Learning & SDAE + MLP, LSTM + MLP, 1D CNN, CNN, BiLSTM, DNN & 8 & Papers~([\citealp{ref3}], [\citealp{ref4}], [\citealp{ref6}], [\citealp{ref8}], [\citealp{ref11}], [\citealp{ref12}], [\citealp{ref18}], [\citealp{ref19}]) \\
 \hline
@@ -294,7 +362,9 @@ Data Fusion/Multimodal & Multiple ML techniques (integrated analysis across moda
 Reinforcement Learning & None & 0 & - \\
 \hline
 \end{tabular}
+\label{tab:ai_subfields}
 \end{table}
+
 
 \subsection{What datasets and evaluation metrics are used for Artificial Intelligence based attention assessment studies?}
 The datasets and evaluation metrics used in the reviewed studies varied greatly, reflecting the differences in attention-related tasks. From diagnostic assessments of different datasets and metrics were used to monitoring attention in real-time classroom factors and attention disorders like ADHD. \\ \\
@@ -318,87 +388,101 @@ The machine learning models demonstrated varying levels of effectiveness dependi
 \textbullet \textbf{ADHD Detection:} \textbf{ADHD-200} and \textbf{SPECT brain scans} were highly effective in detecting attention deficits associated with \textbf{ADHD} that achieving accuracies of \textbf{up to 99.58\%} Papers~([\citealp{ref11}], [\citealp{ref19}]). All of these models used a combination of \textbf{SVM}, \textbf{Random Forest}, and \textbf{CNN} architectures to classify \textbf{ADHD} based on neuroimaging and physiological data.  \\ \\
 \textbullet \textbf{Facial Expression and Eye-Tracking Models:} Models analyzing facial expressions and eye-tracking data in classroom settings demonstrated high performance that accuracies ranging \textbf{from 85\% to 93.1\%} Papers~([\citealp{ref7}], [\citealp{ref8}]). These models were especially effective at detecting attention shifts which is related to student engagement in educational contexts.  \\ 
 
-\subsection{ What challenges and limitations exist in Artificial Intelligence powered attention assessment?}
-Several challenges and limitations were identified across the reviewed studies: \\
+\subsection{Challenges and Limitations in Artificial Intelligence-Powered Attention Assessment}
 
-\textbullet \textbf{Data-Related Issues:} Many studies suffered from \textbf{small sample sizes} Papers~([\citealp{ref3}], [\citealp{ref13}]). Also, \textbf{data imbalance} was a significant issue in datasets involving attention states, where low-attention states were often ignored Papers~([\citealp{ref9}], [\citealp{ref19}]). \\ \\ 
-\textbullet \textbf{Overfitting:} Overfitting was a common issue in models trained on small or highly specific datasets. Overfitting led to reduced performance on unseen data Papers~([\citealp{ref6}], [\citealp{ref15}]).  \\ \\
-\textbullet \textbf{Privacy and Ethical Concerns:} \textbf{Privacy and Ethical Concerns:} The use of \textbf{biometric data}, including facial expressions, EEG, and physiological measurements, raised concerns about privacy and ethical associations, especially when working with children Papers~([\citealp{ref6}], [\citealp{ref15}]).  \\ \\
-\textbullet \textbf{Hardware Constraints:} \textbf{Hardware Constraints:} Many models required specialized equipment, such as \textbf{EEG headsets} and \textbf{eye-trackers}, which creates an issue in scalability in real-world applications. Developing models that are less reliant on expensive hardware was a key challenge Papers~([\citealp{ref8}], [\citealp{ref14}]). \\ 
+Several challenges and limitations were identified across the reviewed studies:
+
+\begin{itemize}
+    \item \textbf{Data-Related Issues:} Many studies suffered from \textbf{small sample sizes}~\citep{ref3,ref13}. Additionally, \textbf{data imbalance} was a significant issue in datasets involving attention states, where low-attention states were often underrepresented~\citep{ref9,ref19}.
+    
+    \item \textbf{Overfitting:} Overfitting was a common problem in models trained on small or highly specific datasets, leading to reduced performance on unseen data~\citep{ref6,ref15}.
+    
+    \item \textbf{Privacy and Ethical Concerns:} The use of \textbf{biometric data}, including facial expressions, EEG, and physiological measurements, raised important privacy and ethical issues, especially when working with children~\citep{ref6,ref15}.
+    
+    \item \textbf{Hardware Constraints:} Many models required specialized equipment such as \textbf{EEG headsets} and \textbf{eye-trackers}, limiting scalability in real-world applications. Developing models less reliant on expensive hardware remains a key challenge~\citep{ref8,ref14}.
+\end{itemize}
 
 \begin{table}[H]
 \centering
+\footnotesize
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.5}
 \caption{Key Limitations Identified in Reviewed Papers}
 \rowcolors{2}{lightgray}{white}
-\begin{tabular}{|p{0.50\textwidth}|p{0.25\textwidth}|p{0.22\textwidth}|}
+\begin{tabular}{|p{0.16\textwidth}|p{0.16\textwidth}|p{0.16\textwidth}|}
 \hline
-\textbf{Key Limitation} & \textbf{No. of Papers Addressing This Limitation} & \textbf{Papers} \\
+\textbf{Key Limitation} & \textbf{No. of Papers Addressing 
+Limitation} & \textbf{Papers} \\
 \hline
-Small sample size & 8 & Papers~([\citealp{ref2}], [\citealp{ref3}], [\citealp{ref4}], [\citealp{ref7}], [\citealp{ref10}], [\citealp{ref12}], [\citealp{ref14}], [\citealp{ref15}]) \\
+Small sample size & 8 & Papers~\citep{ref2,ref3,ref4,ref7,ref10,ref12,ref14,ref15} \\
 \hline
-Data imbalance & 3 & Papers~([\citealp{ref9}], [\citealp{ref11}], [\citealp{ref13}]) \\
+Data imbalance & 3 & Papers~\citep{ref9,ref11,ref13} \\
 \hline
-Subject variability & 1 & Paper~([\citealp{ref3}]) \\
+Subject variability & 1 & Paper~\citep{ref3} \\
 \hline
-Privacy concerns & 2 & Papers~([\citealp{ref6}], [\citealp{ref8}]) \\
+Privacy concerns & 2 & Papers~\citep{ref6,ref8} \\
 \hline
-Overfitting risk & 1 & Paper~([\citealp{ref13}]) \\
+Overfitting risk & 1 & Paper~\citep{ref13} \\
 \hline
-Comorbidities and diagnosis accuracy & 2 & Papers~([\citealp{ref5}], [\citealp{ref15}]) \\
+Comorbidities and diagnosis accuracy & 2 & Papers~\citep{ref5,ref15} \\
 \hline
-Limited feature sets (e.g., blink frequency, eye states) & 2 & Papers~([\citealp{ref7}], [\citealp{ref8}]) \\
+Limited feature sets (e.g., blink frequency, eye states) & 2 & Papers~\citep{ref7,ref8} \\
 \hline
-Lack of ecological validity (real-world applicability) & 1 & Paper~([\citealp{ref16}]) \\
+Lack of ecological validity (real-world applicability) & 1 & Paper~\citep{ref16} \\
 \hline
-No control for confounding factors (e.g., comorbidities) & 1 & Paper~([\citealp{ref15}]) \\
+No control for confounding factors (e.g., comorbidities) & 1 & Paper~\citep{ref15} \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsection{ What are the future research directions for Artificial Intelligence based attention analysis?} 
+\subsection{Future Research Directions for Artificial Intelligence-Based Attention Analysis}
 
-The studies identify several important future directions for advancing Artificial Intelligence based attention assessment: \\
+The reviewed studies suggest several important directions for advancing AI-based attention assessment:
 
-\textbullet \textbf{Multimodal Approaches:} Combining multiple data types, such as \textbf{EEG}, \textbf{facial expressions}, and \textbf{eye-tracking}, was highlighted as a great direction for improving attention detection accuracy. Multimodal systems can decrease limitations of individual data types and create more robust models Papers~([\citealp{ref1}], [\citealp{ref7}], [\citealp{ref8}]). \\ 
-
-\textbullet \textbf{Real-Time Systems and Scalability:} Future research should focus on developing \textbf{real-time attention monitoring systems} that can be used in dynamic environments such as classrooms or workplaces. Improving the scalability of Artificial Intelligence models for large usage, especially in large, diverse populations that can strengthen models Papers~([\citealp{ref6}], [\citealp{ref16}]). \\ 
-
-\textbullet \textbf{Explainability and Transparency:} In modern days, Artificial Intelligence models become more integrated into clinical and educational settings so there is a growing need for \textbf{explainable Artificial Intelligence} that ensure the decision-making processes are transparent and understandable. This would be especially important in contexts like ADHD diagnosis, where require clarity about model predictions Papers~([\citealp{ref10}], [\citealp{ref19}]). \\ 
-
-\textbullet \textbf{Larger Datasets and Personalized Approaches:} Expanding datasets to include a wide range of individuals and environmental contexts would help improve model generalization. Also, using personalized methods that adjust to how each person thinks and processes information could make attention monitoring systems work much better and smoother Papers~([\citealp{ref5}], [\citealp{ref9}]). \\ 
-
-\textbullet \textbf{Integration with Educational Tools:} Real-time feedback could be provided to learners and instructors by Integrating Artificial Intelligence based attention monitoring systems with \textbf{e-Learning platforms} and \textbf{virtual reality tools}. This could help create personalized support that helps student engagement and improves learning results Papers~([\citealp{ref8}], [\citealp{ref7}]). \\ \\
-
+\begin{itemize}
+    \item \textbf{Multimodal Approaches:} Combining multiple data types such as \textbf{EEG}, \textbf{facial expressions}, and \textbf{eye-tracking} to improve attention detection accuracy. Multimodal systems reduce the limitations of individual data types and create more robust models~\citep{ref1,ref7,ref8}.
+    
+    \item \textbf{Real-Time Systems and Scalability:} Developing \textbf{real-time attention monitoring systems} suitable for dynamic environments like classrooms or workplaces. Enhancing scalability to handle larger, diverse populations will strengthen model robustness~\citep{ref6,ref16}.
+    
+    \item \textbf{Explainability and Transparency:} Integrating \textbf{explainable Artificial Intelligence (XAI)} methods to ensure transparency and understandability, especially critical in clinical applications like ADHD diagnosis~\citep{ref10,ref19}.
+    
+    \item \textbf{Larger Datasets and Personalized Models:} Expanding datasets to include diverse populations and contexts will improve generalizability. Personalized models that adapt to individual cognitive processing are encouraged to enhance system effectiveness~\citep{ref5,ref9}.
+    
+    \item \textbf{Integration with Educational Tools:} Embedding AI attention monitoring with \textbf{e-Learning platforms} and \textbf{virtual reality tools} to provide real-time feedback and personalized support, thereby enhancing student engagement and learning outcomes~\citep{ref7,ref8}.
+\end{itemize}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{bar.png}
+\includegraphics[width=0.6\textwidth]{bar.png}
 \caption{Future Directions Suggested by Papers}
 \end{figure}
 
 \begin{table}[H]
 \centering
+\footnotesize
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{0.5}
 \caption{Future Research Directions Identified in Reviewed Papers}
 \rowcolors{2}{lightgray}{white}
-\begin{tabular}{|p{0.55\textwidth}|p{0.22\textwidth}|p{0.20\textwidth}|}
+\begin{tabular}{|p{0.16\textwidth}|p{0.16\textwidth}|p{0.16\textwidth}|}
 \hline
-\textbf{Future Direction Suggested} & \textbf{No. of Papers Addressing This Suggestion} & \textbf{Papers} \\
+\textbf{Future Direction Suggested} & \textbf{No. of Papers Addressing Suggestion} & \textbf{Papers} \\
 \hline
-Real-time systems and processing & 4 & Papers~([\citealp{ref1}], [\citealp{ref3}], [\citealp{ref4}], [\citealp{ref18}]) \\
+Real-time systems and processing & 4 & Papers~\citep{ref1,ref3,ref4,ref18} \\
 \hline
-Multimodal data integration & 5 & Papers~([\citealp{ref2}], [\citealp{ref5}], [\citealp{ref8}], [\citealp{ref11}], [\citealp{ref15}]) \\
+Multimodal data integration & 5 & Papers~\citep{ref2,ref5,ref8,ref11,ref15} \\
 \hline
-Larger, more diverse datasets & 4 & Papers~([\citealp{ref2}], [\citealp{ref3}], [\citealp{ref5}], [\citealp{ref11}]) \\
+Larger, more diverse datasets & 4 & Papers~\citep{ref2,ref3,ref5,ref11} \\
 \hline
-Personalized models & 3 & Papers~([\citealp{ref2}], [\citealp{ref5}], [\citealp{ref3}]) \\
+Personalized models & 3 & Papers~\citep{ref2,ref3,ref5} \\
 \hline
-Improved accuracy and robustness of models & 4 & Papers~([\citealp{ref5}], [\citealp{ref6}], [\citealp{ref9}], [\citealp{ref17}]) \\
+Improved accuracy and robustness of models & 4 & Papers~\citep{ref5,ref6,ref9,ref17} \\
 \hline
-Use of new technologies (e.g., VR, AI, Explainable AI) & 4 & Papers~([\citealp{ref1}], [\citealp{ref6}], [\citealp{ref16}], [\citealp{ref5}]) \\
+Use of new technologies (e.g., VR, AI, Explainable AI) & 4 & Papers~\citep{ref1,ref5,ref6,ref16} \\
 \hline
-Integration with educational tools or real-life tasks & 3 & Papers~([\citealp{ref1}], [\citealp{ref7}], [\citealp{ref6}]) \\
+Integration with educational tools or real-life tasks & 3 & Papers~\citep{ref1,ref6,ref7} \\
 \hline
-Addressing privacy concerns & 2 & Papers~([\citealp{ref6}], [\citealp{ref8}]) \\
+Addressing privacy concerns & 2 & Papers~\citep{ref6,ref8} \\
 \hline
 \end{tabular}
 \end{table}
@@ -408,35 +492,37 @@ In this section, we explore what the systematic literature review reveals about 
 
 \subsection{ Artificial Intelligence Techniques for Assessing Attention} \\
 
-The review shows that a wide variety of Artificial Intelligence techniques have been successfully used to assess attention in digital environments. From advanced deep learning models like \textbf{YOLOv3}, \textbf{YOLOv5}, and \textbf{LSTM}, to more traditional machine learning methods like \textbf{SVM} and \textbf{Random Forest}. Deep learning models are especially good at handling unstructured data, such as video and physiological signals, while traditional models still can work very well with structured data like EEG readings and behavioral patterns.
+It is evident from the review that many types of Artificial Intelligence have been successfully employed.
+It is applied to gauge how much attention users pay to online content. Starting with advanced deep learning models like
+\textbf{YOLOv3}, \textbf{YOLOv5}, and LSTM are sieved down to more well-known techniques such as \textbf{SVM} and \textbf{Random Forest} machine learning algorithm. Unstructured data is relatively easy to handle using deep learning models.They can process data, for instance, AI models, with video and physiological signals, unlike conventional models by including readings from EEG and behavioral patterns.
+There is a noticeable shift toward multimodal Artificial Intelligence on these papers. Devices collecting information from \textbf{EEG}, \textbf{eye movements}, and \textbf{facial analysis} are linked to give better results expression analysis. These approaches are achieving better outcomes than using just one approach a single dataset. We then connected EEG to face recognition, for example, is an effective method. It allows a more precise measurement of attention and focus and other attention and focus related elements by picking up both the behavior and the mental signals. This leads us to a significant conclusion from the study, which is capable of handling different situations Papers~([\citealp{ref1}], [\citealp{ref7}], [\citealp{ref16}]).
 
-A noticeable portion across the papers is the move toward multimodal Artificial Intelligence systems that combine data from different sources like \textbf{EEG}, \textbf{eye-tracking}, and \textbf{facial expression} analysis. These combined approaches are proving much more effective than using just one type of data. For instance, bringing together EEG readings with facial expression or video analysis helps give a more accurate picture of attention of a person by capturing both cognitive and behavioral signals. This reflects an important agreement in the research that understanding human attention is complex and needs flexible and also multi-layered models that can adapt to different situations Papers~([\citealp{ref1}], [\citealp{ref7}], [\citealp{ref16}]).
-
-The ability of Artificial Intelligence models to \textbf{detect shifts in attention in real-time} within educational settings is very fascinating. Technologies like \textbf{YOLOv5} and \textbf{DeepSORT} are showing great positivity in enabling the monitoring of student engagement during both in-person and online learning. These advancements are a major step forward in overcoming the challenges faced by previous attention detection systems, which often relied on intrusive equipment. 
+Artificial Intelligence can quickly notice when a person looks away while watching something. Educational settings can be really enjoyable. Technologies such as \textbf{YOLOv5} and  \textbf{DeepSORT} are aiming to help teachers monitor how engaged students are during lessons. Students can attend classes either in person or online. Such improvements are crucial in solving the problem how earlier methods for detecting attention often demanded intrusive techniques equipment.
 
 \subsection{ Dataset Diversity and Evaluation Metrics} \\
 
-One major takeaway from the review is the wide range of datasets used across different studies, including \textbf{EEG data}, \textbf{facial expressions}, and \textbf{eye-tracking datasets}. This variety highlights the complex nature of attention and the need for different types of data to capture perfectly in various contexts. EEG data, in particular, has been widely used in studies related to cognitive load and \textbf{ADHD}, with models like \textbf{SVM} and \textbf{Random Forest} showing strong accuracy in identifying attention deficits Papers~([\citealp{ref11}], [\citealp{ref19}]). However, a major challenge remains the small sample sizes of these datasets that raise a concern about how well the findings can be generalized to larger populations.
+The review highlights the use of a wide selection of datasets from various sources datasets made up of studies on \textbf{EEG}, \textbf{facial expressions}, and \textbf{eye tracking}. This variety it shows that attention is difficult to grasp and depends on several kinds of information suitable for different circumstances. Researchers have widely used \textbf{EEG} data in a variety of studies. Studies have shown that both \textbf{SVM} and \textbf{Random Forest} help tackle the problem of cognitive load and \textbf{ADHD}. They have high accuracy in finding attention deficits, as shown in Papers~([\citealp{ref11}], [\citealp{ref19}]). However, a key issue is this still leaves the concern about how small the datasets are in terms of accuracy. These studies can be applied to larger groups of people.
 
-Most of the studies evaluated model performance using metrics like \textbf{accuracy}, \textbf{precision}, and \textbf{AUC}. \textbf{AUC} especially important for models focused on diagnosing \textbf{ADHD} Papers~([\citealp{ref11}], [\citealp{ref19}]). However, the heavy reliance on accuracy as the main performance measure brings up concerns, especially when dealing with imbalanced datasets where attention states (such as high vs. low attention) are not equally represented. To improve the evaluation of models, future research should consider using more comprehensive metrics like \textbf{F1-score} or \textbf{balanced accuracy}. These metrics offer a more close understanding of model performance, especially in real-world situations where datasets are often imbalanced Papers~([\citealp{ref9}], [\citealp{ref13}]).
+Most analyses measured how well models performed using measurements such as \textbf{accuracy} and \textbf{precision} and \textbf{AUC}. For models aimed at \textbf{ADHD} diagnosis, \textbf{AUC} is particularly significant in research studies Papers~([\citealp{ref11}], [\citealp{ref19}]). Still, the main focus on accuracy as the main measure raises some concerns stops, which are especially critical in cases where datasets have significant imbalance.
+This dataset does not have an equal number of high and low attention cases. To make models more accurate during evaluation, researchers should examine other, more advanced measures such as the \textbf{F1-score} or \textbf{balanced}, \textbf{accuracy}. Such metrics give a good idea of how well the model functions.
+In practice, datasets often have an imbalance between positive and negative examples.
 
 \subsection{ Effectiveness of Machine Learning Models} \\
 
-The studies reviewed show that machine learning models, especially deep learning approaches can be highly effective in detecting attention shifts, with some even achieving \textbf{impressive accuracy} in real-time applications Papers~([\citealp{ref1}], [\citealp{ref8}]). Model performance often depends on the type of data being used. For example, \textbf{facial expression recognition} and \textbf{eye-tracking techniques} tend to be more accurate when evaluating attention during visual tasks, while \textbf{EEG-based models} are better for identifying cognitive load and attention deficits Papers~([\citealp{ref3}], [\citealp{ref16}]). A promising step emerging from this research is the use of hybrid models that combine multiple data sources. These models can address the limitations of individual methods and offer a more complete picture of the attention of a person by integrating different types of input.
-
-\textbf{EEG-based models} have shown strong potential in clinical settings, especially for diagnosing \textbf{ADHD}. Studies using models like \textbf{SVM} and \textbf{Random Forest} achieved remarkably high accuracy, some reaching \textbf{up to 99.58\pct} in identifying \textbf{ADHD-related attention patterns} Papers~([\citealp{ref11}], [\citealp{ref19}]). These results suggest that Artificial Intelligence could play a vital role in streamlining and improving the diagnostic process, offering quicker, smarter and potentially more reliable alternatives to traditional methods. However, some challenges still need to be addressed. Issues like \textbf{data imbalance}, \textbf{overfitting}, and \textbf{differences between individual subjects} continue to limit how well these models can generalize, which creates obstacles to their broader clinical adoption Papers~([\citealp{ref3}], [\citealp{ref13}]).
+Many papers have highlighted that deep learning models offer a strong advantage in machine learning. They are highly successful in noticing changes in someone’s attention, with some showing impressive results. The findings of Hosseini and colleagues were confirmed in real-time applications Papers~([\citealp{ref1}], [\citealp{ref8}]). Models often depend on their performance depending on the type of data being used. For instance, assessing attention in visual tasks usually gives better results when using \textbf{facial expression} and \textbf{eye tracking} techniques. Examining \textbf{EEG} data is better at noticing both cognitive load and declines in attention Reference sources used Papers~([\citealp{ref3}], [\citealp{ref16}]). Combining various elements into one model could be the future of machine intelligence they bring together various sources of data. These approaches help to overcome the constraints faced by single models. It includes methods that provide a better understanding of how a person pays attention how the data is presented. Clinical research suggests that \textbf{EEG-based} models are particularly useful for making diagnoses \textbf{ADHD}. Using \textbf{SVM} and \textbf{Random Forest} models, researchers managed to achieve dramatic results. Some studies reported a level of 99.58\% in recognizing the attention patterns associated with \textbf{EEG}ADHD. Such as Papers~([\citealp{ref11}], [\citealp{ref19}]). According to these findings, AI might be very helpful for these problems. The tool aims to speed up and enhance the diagnostic process by being both quicker and more intelligent. There are better ways to do the task than what is traditionally done. Yet, there are still difficulties to resolve addressed. Struggles like unequal data split, models that learn the information too well, and individual patterns are examples of issues.
 
 \subsection{ Challenges and Limitations} \\ 
 
-Despite promising advancements, Artificial Intelligence powered attention assessment still faces some ongoing challenges. One of the most significant is the \textbf{limited sample size of many datasets}, especially those focused on clinical conditions like \textbf{ADHD} Papers~([\citealp{ref11}], [\citealp{ref13}]). Small datasets increase the risk of \textbf{overfitting}. When a model may perform well during training but struggle to deliver accurate results on new and unseen data it is called overfitting. This problem is compounded by the lack of large, high-quality datasets. Without big and more inclusive data, it is difficult to build models that are very much generalizable and effective across different populations.
+Artificial intelligence in attention assessment is seeing some improvement, but may still not be perfect. It faces various ongoing issues. An important limitation is the size of the sample. Mostly of these datasets are created to analyze clinical situations, for example, \textbf{ADHD} and mood disorders Papers~([\citealp{ref11}], [\citealp{ref13}]). Having only a small number of examples can make the data fit the model too much. When the model behaves as it should. When a model performs well when training but fails to give correct results on new data, it is called overfitting. The lack of substantial, quality datasets adds to this challenge. Without
+A lot of data that is both broad and inclusive makes it challenging to develop a model that can generalize well. It is effective for various groups of people. There are major concerns about privacy when building Artificial Intelligence.
+devices for evaluating attention. Processing facial and eye movement data with AI is simple. Meanwhile, EEG signals pose ethical questions about what to do with personal brain data.
+collected, preserved, and used. It is important for people to trust these systems deal with laws related to data privacy such as the \textbf{GDPR}. It is subjective in some cases, information such as self-reports of attention or visual observations which are not completely reliable reflect accurately how someone is thinking about an issue Papers~([\citealp{ref5}], [\citealp{ref6}]).
 
-\textbf{Privacy} concerns also a major challenge in the development of Artificial Intelligence based attention assessment tools. Using \textbf{biometric data} like \textbf{facial expressions}, \textbf{eye movements}, and \textbf{EEG signals} causes important ethical questions about how this sensitive information is collected, stored, and used. To build trust in these systems, it is important that they work with privacy regulations such as the GDPR. Another issue is the subjectivity of certain data sources, like self-reported attention levels or observational assessments which may not accurately reflect an individual true cognitive state Papers~([\citealp{ref5}], [\citealp{ref6}]).
-
-\textbf{Accessibility} remains another key concern in the development of Artificial Intelligence based attention monitoring systems. Many current models still depend on \textbf{specialized hardware}, like \textbf{EEG headsets} and \textbf{eye-tracking devices} which can be costly and complicated to operate. This reliance on high-end equipment makes it difficult to implement, especially in low-resource environments or at a larger scale Papers~([\citealp{ref8}], [\citealp{ref14}]). To make attention monitoring technologies truly more inclusive and practical, it is necessary to find ways to reduce dependency on such hardware and develop more accessible, user-friendly solutions.
+Making Artificial Intelligence accessible to all is a major concern for developers. Systems that monitor attention. Several models today still require specialized hardware to work efficiently. Just like \textbf{EEG} headsets and \textbf{eye-tracking} devices, which tend to be expensive and difficult to operate. High-end equipment is required, so it can be tricky to carry out in the industry. This happens when resources are limited and the desired application requires processing a larger number of items Papers~([\citealp{ref8}], [\citealp{ref14}]). How can I direct attention to a certain place? To make monitoring technologies more inclusive and practical, new ideas are needed, improve user experience and lower the need for specialized hardware.
 
 \subsection{ Future Research Directions} \\
 
-Looking ahead, there are several exciting ways for advancing Artificial Intelligence based attention assessment. One of the promising directions is the \textbf{development of multimodal systems} that combine data from different sources, such as \textbf{EEG signals}, \textbf{facial expressions}, and \textbf{eye movements}. These systems can offer a more accurate picture of attention and also can address many of the limitations seen in single-modality approaches by integrating multiple types of input Papers~([\citealp{ref1}], [\citealp{ref7}]).
+In the future, there are promising opportunities for Artificial Intelligence to develop attention assessment. A promising trend is the advancement of multimodal. Systems that combine information from EEG readings and expressions are being developed including eye expressions. They are designed to aid in understanding attention better. Integrating can address a lot of the disadvantages that single-modality models often have. From the list I provided, there are several papers in different formats  Papers~([\citealp{ref1}], [\citealp{ref7}]).
 
 Another key focus for future research is \textbf{creating real-time monitoring systems} that can work effectively and smoothly in everyday environments like classrooms or workplaces. Such systems could deliver immediate feedback and enable personalized interventions based on attention levels of a person and ultimately supporting better learning outcomes and improved productivity Papers~([\citealp{ref6}], [\citealp{ref8}]).
 
@@ -444,53 +530,61 @@ Another key focus for future research is \textbf{creating real-time monitoring s
 
 Additionally, future research should prioritize expanding datasets to include more diverse populations and real-world environments. Larger and more representative data will help build models that are not only more robust but also more generalizable across different population, demographics and use cases Papers~([\citealp{ref9}], [\citealp{ref16}]). This step is essential for developing attention assessment tools that are fair, reliable, and effective in a wider range of settings and sectors.
 
-\section{Conclusion}
-In conclusion, Artificial Intelligence powered approaches to attention assessment have shown remarkable progress, especially in educational and clinical settings. By using advancements of machine learning techniques alongside varied data sources, such as \textbf{EEG signals}, \textbf{facial expressions}, and \textbf{eye-tracking} researchers have been able to effectively detect attention shifts and also can support the diagnosis of attention-related disorders.
-Despite these advancements, several challenges occur. \textbf{Limited sample sizes}, \textbf{concerns around data privacy} and \textbf{the dependence on specialized hardware} continue to effect broader adoption. To move forward, future research should prioritize building more generalizable models, developing larger and more diverse datasets, and advancing multimodal systems. These steps will make Artificial Intelligence powered attention assessment tools more accurate, ethical, and applicable in real-world scenarios. \\ 
 
-\section{References}
-\vspace{-2em}
-\renewcommand{\refname}{} % Removes the automatic "References" heading
+\section{Conclusion}
+
+Artificial Intelligence-powered approaches to attention assessment have shown remarkable progress, especially in educational and clinical settings. By leveraging advancements in machine learning alongside varied data sources such as \textbf{EEG signals}, \textbf{facial expressions}, and \textbf{eye-tracking}, researchers have been able to effectively detect attention shifts and support the diagnosis of attention-related disorders.
+
+Despite these advancements, challenges remain including \textbf{limited sample sizes}, \textbf{data privacy concerns}, and \textbf{dependence on specialized hardware}, which affect broader adoption. Future research should prioritize building generalizable models, expanding datasets with diverse populations, and advancing multimodal systems. These steps will contribute to making AI-powered attention assessment tools more accurate, ethical, and applicable to real-world scenarios.
+
+\vspace{1em}
+
+\section*{References}
+\begingroup
+\setlength{\parskip}{0.4em}
+\setlength{\itemsep}{0pt}
+\renewcommand{\section}[2]{}%
 \begin{thebibliography}{99}
 
-\bibitem{ref1} D. F. Terraza Arciniegas, M. Amaya, A. Piedrahita Carvajal, P. A. Rodriguez-Marin, L. Duque-Muñoz, and J. D. Martinez-Vargas, "Students' Attention Monitoring System in Learning Environments based on Artificial Intelligence," IEEE Latin America Transactions, vol. 20, no. 1, pp. 126–132, Jan. 2022, doi: 10.1109/TLA.2022.9662181.
+\bibitem{ref1} D. F. Terraza Arciniegas, M. Amaya, A. Piedrahita Carvajal, P. A. Rodriguez-Marin, L. Duque-Muñoz, and J. D. Martinez-Vargas, “Students’ Attention Monitoring System in Learning Environments based on Artificial Intelligence,” \textit{IEEE Latin America Transactions}, vol. 20, no. 1, pp. 126–132, Jan. 2022, doi: 10.1109/TLA.2022.9662181.
 
-\bibitem{ref2} P. Chakraborty, M. A. Yousuf, and S. Rahman, "Predicting Level of Visual Focus of Human’s Attention Using Machine Learning Approaches," in Proc. Int. Conf. Trends Comput. Cogn. Eng., Springer, Singapore, 2021, vol. 1309, doi: 10.1007/978-981-33-4673-4\_56.
+\bibitem{ref2} P. Chakraborty, M. A. Yousuf, and S. Rahman, “Predicting Level of Visual Focus of Human’s Attention Using Machine Learning Approaches,” in \textit{Proc. Int. Conf. Trends Comput. Cogn. Eng.}, Springer, Singapore, 2021, vol. 1309, doi: 10.1007/978-981-33-4673-4\_56.
 
-\bibitem{ref3} A. Saha, V. Minz, S. Bonela, S. R. Sreeja, R. Chowdhury, and D. Samanta, "Classification of EEG Signals for Cognitive Load Estimation Using Deep Learning Architectures," in Intelligent Human Computer Interaction (IHCI 2018), vol. 11278, Springer, Cham, 2018, doi: 10.1007/978-3-030-04021-5\_6.
+\bibitem{ref3} A. Saha, V. Minz, S. Bonela, S. R. Sreeja, R. Chowdhury, and D. Samanta, “Classification of EEG Signals for Cognitive Load Estimation Using Deep Learning Architectures,” in \textit{Intelligent Human Computer Interaction (IHCI 2018)}, vol. 11278, Springer, Cham, 2018, doi: 10.1007/978-3-030-04021-5\_6.
 
-\bibitem{ref4} I. Hassan, M. Zolezzi, H. Khalil, R. M. Al Saady, S. Pedersen, and M. E. H. Chowdhury, "Cognitive Load Estimation Using a Hybrid Cluster-Based Unsupervised Machine Learning Technique," IEEE Access, vol. 12, pp. 118785–118801, 2024, doi: 10.1109/ACCESS.2024.3428691.
+\bibitem{ref4} I. Hassan, M. Zolezzi, H. Khalil, R. M. Al Saady, S. Pedersen, and M. E. H. Chowdhury, “Cognitive Load Estimation Using a Hybrid Cluster-Based Unsupervised Machine Learning Technique,” \textit{IEEE Access}, vol. 12, pp. 118785–118801, 2024, doi: 10.1109/ACCESS.2024.3428691.
 
-\bibitem{ref5} V. Tsakou and A. Drigas, "Early Detection of Preschool Children with ADHD and the role of mobile Apps and AI," Technium Social Sciences Journal, vol. 30, no. 1, pp. 127–137, 2022, doi: 10.47577/tssj.v30i1.6266.
+\bibitem{ref5} V. Tsakou and A. Drigas, “Early Detection of Preschool Children with ADHD and the role of mobile Apps and AI,” \textit{Technium Social Sciences Journal}, vol. 30, no. 1, pp. 127–137, 2022, doi: 10.47577/tssj.v30i1.6266.
 
-\bibitem{ref6} Z. Abdelhadi, M. Naseif, W. Alhejali, and A. Elhayek, "TeacherEye: An AI-Powered System for Monitoring Student Engagement in Online Education," in Proc. 22nd Int. Learn. Technol. Conf. (L&T), Jeddah, Saudi Arabia, 2025, pp. 25–30, doi: 10.1109/LT64002.2025.10940905.
+\bibitem{ref6} Z. Abdelhadi, M. Naseif, W. Alhejali, and A. Elhayek, “TeacherEye: An AI-Powered System for Monitoring Student Engagement in Online Education,” in \textit{Proc. 22nd Int. Learn. Technol. Conf. (L\&T)}, Jeddah, Saudi Arabia, 2025, pp. 25–30, doi: 10.1109/LT64002.2025.10940905.
 
-\bibitem{ref7} Q. Deng and Z. Wu, "Untitled," IOP Conf. Ser.: Earth Environ. Sci., vol. 199, p. 032042, 2018, doi: 10.1088/1755-1315/199/3/032042.
+\bibitem{ref7} Q. Deng and Z. Wu, “Untitled,” \textit{IOP Conf. Ser.: Earth Environ. Sci.}, vol. 199, p. 032042, 2018, doi: 10.1088/1755-1315/199/3/032042.
 
-\bibitem{ref8} Z. Trabelsi, F. Alnajjar, M. M. A. Parambil, M. Gochoo, and L. Ali, "Real-Time Attention Monitoring System for Classroom: A Deep Learning Approach for Student’s Behavior Recognition," Big Data Cogn. Comput., vol. 7, p. 48, 2023, doi: 10.3390/bdcc7010048.
+\bibitem{ref8} Z. Trabelsi, F. Alnajjar, M. M. A. Parambil, M. Gochoo, and L. Ali, “Real-Time Attention Monitoring System for Classroom: A Deep Learning Approach for Student’s Behavior Recognition,” \textit{Big Data Cogn. Comput.}, vol. 7, p. 48, 2023, doi: 10.3390/bdcc7010048.
 
-\bibitem{ref9} N. Alruwais and M. Zakariah, "Student-Engagement Detection in Classroom Using Machine Learning Algorithm," Electronics, vol. 12, p. 731, 2023, doi: 10.3390/electronics12030731.
+\bibitem{ref9} N. Alruwais and M. Zakariah, “Student-Engagement Detection in Classroom Using Machine Learning Algorithm,” \textit{Electronics}, vol. 12, p. 731, 2023, doi: 10.3390/electronics12030731.
 
-\bibitem{ref10} S. S. Abdul Hamid, N. Admodisastro, N. Manshor, A. Kamaruddin, and A. A. A. Ghani, "Dyslexia Adaptive Learning Model: Student Engagement Prediction Using Machine Learning Approach," in Recent Advances on Soft Computing and Data Mining (SCDM 2018), vol. 700, Springer, Cham, 2018, doi: 10.1007/978-3-319-72550-5\_36.
+\bibitem{ref10} S. S. Abdul Hamid, N. Admodisastro, N. Manshor, A. Kamaruddin, and A. A. A. Ghani, “Dyslexia Adaptive Learning Model: Student Engagement Prediction Using Machine Learning Approach,” in \textit{Recent Advances on Soft Computing and Data Mining (SCDM 2018)}, vol. 700, Springer, Cham, 2018, doi: 10.1007/978-3-319-72550-5\_36.
 
-\bibitem{ref11} C. Nash, R. Nair, and S. M. Naqvi, "Machine Learning in ADHD and Depression Mental Health Diagnosis: A Survey," IEEE Access, vol. 11, pp. 86297–86317, 2023, doi: 10.1109/ACCESS.2023.3304236.
+\bibitem{ref11} C. Nash, R. Nair, and S. M. Naqvi, “Machine Learning in ADHD and Depression Mental Health Diagnosis: A Survey,” \textit{IEEE Access}, vol. 11, pp. 86297–86317, 2023, doi: 10.1109/ACCESS.2023.3304236.
 
-\bibitem{ref12} M. Cao, E. Martin, and X. Li, "Machine learning in attention-deficit/hyperactivity disorder: new approaches toward understanding the neural mechanisms," Transl Psychiatry, vol. 13, p. 236, 2023, doi: 10.1038/s41398-023-02536-w.
+\bibitem{ref12} M. Cao, E. Martin, and X. Li, “Machine learning in attention-deficit/hyperactivity disorder: new approaches toward understanding the neural mechanisms,” \textit{Transl Psychiatry}, vol. 13, p. 236, 2023, doi: 10.1038/s41398-023-02536-w.
 
-\bibitem{ref13} T. Chen, G. Antoniou, M. Adamou, I. Tachmazidis, and P. Su, "Automatic Diagnosis of Attention Deficit Hyperactivity Disorder Using Machine Learning," Applied Artificial Intelligence, vol. 35, no. 9, pp. 657–669, 2021, doi: 10.1080/08839514.2021.1933761.
+\bibitem{ref13} T. Chen, G. Antoniou, M. Adamou, I. Tachmazidis, and P. Su, “Automatic Diagnosis of Attention Deficit Hyperactivity Disorder Using Machine Learning,” \textit{Applied Artificial Intelligence}, vol. 35, no. 9, pp. 657–669, 2021, doi: 10.1080/08839514.2021.1933761.
 
-\bibitem{ref14} M. D. Heller, K. Roots, S. Srivastava, J. Schumann, J. Srivastava, and T. S. Hale, "A Machine Learning-Based Analysis of Game Data for Attention Deficit Hyperactivity Disorder Assessment," Games for Health Journal, vol. 2, no. 5, pp. 291–298, 2013, doi: 10.1089/g4h.2013.0058.
+\bibitem{ref14} M. D. Heller, K. Roots, S. Srivastava, J. Schumann, J. Srivastava, and T. S. Hale, “A Machine Learning-Based Analysis of Game Data for Attention Deficit Hyperactivity Disorder Assessment,” \textit{Games for Health Journal}, vol. 2, no. 5, pp. 291–298, 2013, doi: 10.1089/g4h.2013.0058.
 
-\bibitem{ref15} D. Andrikopoulos, G. Vassiliou, P. Fatouros et al., "Machine learning-enabled detection of attention-deficit/hyperactivity disorder with multimodal physiological data: a case-control study," BMC Psychiatry, vol. 24, p. 547, 2024, doi: 10.1186/s12888-024-05987-7.
+\bibitem{ref15} D. Andrikopoulos, G. Vassiliou, P. Fatouros et al., “Machine learning-enabled detection of attention-deficit/hyperactivity disorder with multimodal physiological data: a case-control study,” \textit{BMC Psychiatry}, vol. 24, p. 547, 2024, doi: 10.1186/s12888-024-05987-7.
 
-\bibitem{ref16} M. E. Minissi, I. A. Chicchi Giglioli, F. Mantovani et al., "Assessment of the Autism Spectrum Disorder Based on Machine Learning and Social Visual Attention: A Systematic Review," J Autism Dev Disord, vol. 52, pp. 2187–2202, 2022, doi: 10.1007/s10803-021-05106-5.
+\bibitem{ref16} M. E. Minissi, I. A. Chicchi Giglioli, F. Mantovani et al., “Assessment of the Autism Spectrum Disorder Based on Machine Learning and Social Visual Attention: A Systematic Review,” \textit{J Autism Dev Disord}, vol. 52, pp. 2187–2202, 2022, doi: 10.1007/s10803-021-05106-5.
 
-\bibitem{ref17} L. Caselles-Pina, A. Quesada-López, A. Sújar, E. M. Garzón Hernández, and D. Delgado-Gómez, "A systematic review on the application of machine learning models in psychometric questionnaires for the diagnosis of attention deficit hyperactivity disorder," Eur. J. Neurosci., vol. 60, no. 3, pp. 4115–4127, 2024, doi: 10.1111/ejn.16288.
+\bibitem{ref17} L. Caselles-Pina, A. Quesada-López, A. Sújar, E. M. Garzón Hernández, and D. Delgado-Gómez, “A systematic review on the application of machine learning models in psychometric questionnaires for the diagnosis of attention deficit hyperactivity disorder,” \textit{Eur. J. Neurosci.}, vol. 60, no. 3, pp. 4115–4127, 2024, doi: 10.1111/ejn.16288.
 
-\bibitem{ref18} Ö. Kasim, "Identification of attention deficit hyperactivity disorder with deep learning model," Phys. Eng. Sci. Med., vol. 46, pp. 1081–1090, 2023, doi: 10.1007/s13246-023-01275-y.
+\bibitem{ref18} Ö. Kasim, “Identification of attention deficit hyperactivity disorder with deep learning model,” \textit{Phys. Eng. Sci. Med.}, vol. 46, pp. 1081–1090, 2023, doi: 10.1007/s13246-023-01275-y.
 
-\bibitem{ref19} M. de O. Meira, A. M. de P. Canuto, B. M. de Carvalho, and R. L. C. Jales, "Comparison of Machine Learning predictive methods to diagnose the Attention Deficit/Hyperactivity Disorder levels using SPECT," Research, Society and Development, vol. 11, no. 8, p. e54811831258, 2022, doi: 10.33448/rsd-v11i8.31258.
+\bibitem{ref19} M. de O. Meira, A. M. de P. Canuto, B. M. de Carvalho, and R. L. C. Jales, “Comparison of Machine Learning predictive methods to diagnose the Attention Deficit/Hyperactivity Disorder levels using SPECT,” \textit{Research, Society and Development}, vol. 11, no. 8, p. e54811831258, 2022, doi: 10.33448/rsd-v11i8.31258.
 
 \end{thebibliography}
+\endgroup
 
 \end{document}
